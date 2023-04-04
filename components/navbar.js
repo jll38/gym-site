@@ -41,7 +41,7 @@ import {
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
             <Text
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-              fontFamily={'heading'}
+              fontFamily={'Helvetica'}
               color={useColorModeValue('gray.800', 'white')}>
               MyWebClass.org
             </Text>
