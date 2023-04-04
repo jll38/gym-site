@@ -3,6 +3,7 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
+import { Divider, Box} from '@chakra-ui/react'
 
 export default function Post({ postData }) {
   return (
@@ -12,10 +13,11 @@ export default function Post({ postData }) {
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <Divider/>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <Box maxW='1000px' dangerouslySetInnerHTML={{ __html: postData.contentHtml }}/>
       </article>
     </Layout>
   )

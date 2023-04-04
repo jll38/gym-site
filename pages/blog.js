@@ -18,13 +18,14 @@ import {
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <Container minH={'52vh'}>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <Heading className={utilStyles.headingLg}>Blog</Heading>
+        <Divider mb='5'></Divider>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
