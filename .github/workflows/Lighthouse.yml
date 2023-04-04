@@ -1,0 +1,31 @@
+name: Lighthouse HTML Report
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "17.x"
+
+      - name: Install Dependencies
+        run:  |
+          npm install
+          npm run build
+          npm run dev --turbo
+
+      - name: Generate Lighthouse Report
+        run: npm run test:lighthouse
+
+      - name: Upload report, screenshots and videos of failed tests
+        uses: actions/upload-artifact@v3
+        with:
+          name: Lighthouse report
+          path: lighthouse-report.html
