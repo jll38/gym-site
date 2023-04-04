@@ -27,7 +27,7 @@ export default function Footer() {
           spacing={8}>
           <Stack spacing={6}>
             <Box>
-              <Text fontWeight={'700'} fontSize={'xl'}>MyWebClass.org</Text>
+              <Text fontWeight={'700'} fontSize={'lg'}>MyWebClass.org</Text>
             </Box>
             <Text fontSize={'sm'}>
               © 2023 MyWebClass.org. All rights reserved

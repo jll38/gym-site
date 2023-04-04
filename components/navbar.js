@@ -66,21 +66,32 @@ import {
               fontSize={'sm'}
               fontWeight={400}
               variant={'link'}
+              href={'/about'}>
+              About
+            </Button>
+            <Button
+              as={'a'}
+              fontSize={'sm'}
+              fontWeight={400}
+              variant={'link'}
               href={'/blog'}>
               Blog
             </Button>
             <Button
               as={'a'}
-              display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'pink.400'}
-              href={'#'}
-              _hover={{
-                bg: 'pink.300',
-              }}>
-              Sign Up
+              fontWeight={400}
+              variant={'link'}
+              href={'/resources'}>
+              Resources
+            </Button>
+            <Button
+              as={'a'}
+              fontSize={'sm'}
+              fontWeight={400}
+              variant={'link'}
+              href={'/services'}>
+              Services
             </Button>
           </Stack>
         </Flex>
