@@ -5,6 +5,7 @@ import Script from 'next/script'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Navbar from './navbar'
 
 const name = '[Your Name]'
 export const siteTitle = 'MyWebClass.org'
@@ -16,7 +17,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Pioneering the Future of Education using AI"
         />
         <meta
           property="og:image"
@@ -35,16 +36,9 @@ export default function Layout({ children, home }) {
         }
       />
       <header className={styles.header}>
+        <Navbar></Navbar>
         {home ? (
           <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
