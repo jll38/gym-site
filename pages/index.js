@@ -22,7 +22,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <Container maxW={'7xl'}>
+      <Container maxW={'7xl'} minH={'80vh'}>
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
@@ -50,14 +50,12 @@ export default function Home({ allPostsData }) {
             </Text>
             <br />
             <Text as={'span'} color={'red.400'} fontSize={{ base: 'xl', md: '2xl', lg:'3xl'}}>
-            Pioneering the Future of Education
+            Empowering the Future of Education
             </Text>
           </Heading>
           <Text color={'gray.500'}>
-          Education, as a cornerstone of society, must adapt to prepare students 
-          for the challenges and opportunities that lie ahead. MyWebClass.org is a 
-          foundation dedicated  to revolutionizing education by incorporating 
-          Agile and Lean principles into the classroom.
+          Revolutionizing education by incorporating Agile and Lean principles into the classroom, 
+          fostering a culture of continuous improvement, collaboration, and adaptability.
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
@@ -100,21 +98,6 @@ export default function Home({ allPostsData }) {
           </Box>
         </Flex>
       </Stack>
-      <Divider></Divider>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
     </Container>
       
     </Layout>

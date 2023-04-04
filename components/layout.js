@@ -13,6 +13,7 @@ export const siteTitle = 'MyWebClass.org'
 
 export default function Layout({ children, home }) {
   return (
+    <>
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -52,7 +53,8 @@ export default function Layout({ children, home }) {
         )}
       </header>
       <main className={styles.main}>{children}</main>
-      <Footer></Footer>
     </div>
+    <Footer></Footer>
+    </>
   )
 }
