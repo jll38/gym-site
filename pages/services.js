@@ -25,7 +25,7 @@ export default function Services({ allPostsData}){
             <Head>
                 <title>{siteTitle}</title>
              </Head>
-             <Container minH='55vh' maxW={'1000px'}>
+             <Container minH='75vh' maxW={'1000px'}>
             <section name="Who we are">
                <Box textAlign={'center'} mt={'20'}>
                   <Box>
