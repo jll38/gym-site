@@ -28,6 +28,16 @@ export default function Resources({ allPostsData}){
              <Container minH='55vh' maxW={'1000px'}>
             <section name="Who we are">
                <Box textAlign={'center'} mt={'20'}>
+               <Image
+              alt={'Hero Image, Classroom full of students learning web development'}
+              fit={'cover'}
+              align={'center'}
+              w={'100%'}
+              h={'400px'}
+              src={
+                'images/logo-black.png'
+              }
+            />
                   <Box>
                      <Heading>Resources</Heading>
                   </Box>

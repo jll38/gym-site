@@ -29,6 +29,16 @@ export default function Services({ allPostsData}){
             <section name="Who we are">
                <Box textAlign={'center'} mt={'20'}>
                   <Box>
+                  <Image
+              alt={'Hero Image, Classroom full of students learning web development'}
+              fit={'cover'}
+              align={'center'}
+              w={'100%'}
+              h={'400px'}
+              src={
+                'images/logo-black.png'
+              }
+            />
                      <Heading>Services</Heading>
                   </Box>
                   <Text>
