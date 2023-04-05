@@ -5,6 +5,7 @@ import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
 import { Feature } from '../components/feature'
+import Testimonials from '../components/testimonial'
 import {
    Container,
    Stack,
@@ -66,7 +67,7 @@ export default function Resources({ allPostsData}){
             <Box>
             <section name="Testimonials" >
                <Heading my={'2'} textAlign={'center'}>Success Stories</Heading>
-               
+               <Testimonials></Testimonials>
             </section>
             </Box>
          </Container>
