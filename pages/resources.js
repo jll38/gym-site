@@ -40,23 +40,23 @@ export default function Resources({ allPostsData}){
                </Box>
             </section>
             <Box p={4} mt={'10'}>
-               <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+               <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
                   <Feature
                      title={'Academic Articles'}
                      text={
-                        'Placeholder'
+                        'Explore the latest research on education and Agile/Lean principles with our collection of academic articles. Our selection includes peer-reviewed journals and publications from leading experts in the field.'
                      }
                   />
                   <Feature
                      title={'Downloadable Guides'}
                      text={
-                        'Placeholder'
+                        'Download our free guides and resources to learn how to implement Agile and Lean principles in your classroom. Our guides cover a range of topics, from project-based learning to Agile methodologies in K-12 education.'
                      }
                   />
                   <Feature
                      title={'Webinars & Workshops'}
                      text={
-                        'Placeholder'
+                        'Join our webinars and workshops to learn from experts and gain practical insights into Agile and Lean principles in education. Our webinars cover a range of topics and are designed to provide educators with actionable strategies for success.'
                      }
                   />
                   
