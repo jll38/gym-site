@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
+import { Feature } from '../components/feature'
 import Link from 'next/link'
 import Date from '../components/date'
 import {
@@ -95,12 +96,3 @@ export async function getStaticProps() {
       }
    }
 }
-
-const Feature = ({ title, text }) => {
-   return (
-      <Stack>
-         <Text fontWeight={600}>{title}</Text>
-         <Text color={'gray.600'}>{text}</Text>
-      </Stack>
-   );
-};
