@@ -4,16 +4,18 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import { Feature } from '../components/feature'
 import {
-  Container,
-  Stack,
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Button,
-  Image,
-  Divider
+   Container,
+   Stack,
+   Flex,
+   Box,
+   Heading,
+   Text,
+   Button,
+   Image,
+   Divider,
+   SimpleGrid,
 } from '@chakra-ui/react';
 
 export default function Resources({ allPostsData}){
@@ -23,30 +25,51 @@ export default function Resources({ allPostsData}){
                 <title>{siteTitle}</title>
              </Head>
              <Container minH='55vh' maxW={'1000px'}>
-                <article>
-                    <section name="Resources">
-                        <Heading>Resources</Heading>
-                        <Divider mb='5'></Divider>
-                        <Text></Text>
-                     </section>
-                     <section name="Academic Articles">
-                        <Heading my={'2'}>Academic Articles</Heading>
-                        <Text></Text>
-                     </section>
-                     <section name="Downloadable Guides">
-                        <Heading my={'2'}>Downloadable Guides</Heading>
-                        <Text></Text>
-                     </section>
-                     <section name="Workshops">
-                        <Heading my={'2'}>Webinars and Workshops</Heading>
-                     </section>
-                     <section name="Success Stories">
-                        <Heading my={'2'}>Success Stories</Heading>
-                        <Text>
-                        </Text>
-                     </section>
-                </article>
-             </Container>
+            <section name="Who we are">
+               <Box textAlign={'center'} mt={'20'}>
+                  <Box>
+                     <Heading>Resources</Heading>
+                  </Box>
+                  <Text>
+                     At MyWebClass.org we provide the resources to help
+                     instructors reimagine educational practices. Our resouces
+                     allow for a new paradigm that empowers our students with the 
+                     knowledge and skills they need to flourish in an increasingly 
+                     complex and interconnected world.
+                  </Text>
+               </Box>
+            </section>
+            <Box p={4} mt={'10'}>
+               <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+                  <Feature
+                     title={'Academic Articles'}
+                     text={
+                        'Placeholder'
+                     }
+                  />
+                  <Feature
+                     title={'Downloadable Guides'}
+                     text={
+                        'Placeholder'
+                     }
+                  />
+                  <Feature
+                     title={'Webinars & Workshops'}
+                     text={
+                        'Placeholder'
+                     }
+                  />
+                  
+
+               </SimpleGrid>
+            </Box>
+            <Box>
+            <section name="Testimonials" >
+               <Heading my={'2'} textAlign={'center'}>Success Stories</Heading>
+               
+            </section>
+            </Box>
+         </Container>
       </Layout>
     );
 }
