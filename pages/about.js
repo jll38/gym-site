@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
+import Layout, { aboutTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import { Feature } from '../components/feature'
@@ -22,7 +22,7 @@ export default function About({ allPostsData }) {
    return (
       <Layout>
          <Head>
-            <title>{siteTitle}</title>
+            <title>{aboutTitle}</title>
          </Head>
          <Container minH='55vh' maxW={'1000px'}>
             <section name="Who we are">

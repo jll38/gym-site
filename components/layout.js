@@ -10,7 +10,7 @@ import Footer from './footer'
 
 const name = '[Your Name]'
 export const siteTitle = 'MyWebClass.org'
-
+export const aboutTitle = 'MyWebClass.org | About'
 export default function Layout({ children, home }) {
   return (
     <>
