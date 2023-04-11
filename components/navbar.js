@@ -14,6 +14,10 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    MenuButton,
+    Menu,
+    MenuList,
+    MenuItem
   } from '@chakra-ui/react';
 
   
@@ -77,14 +81,29 @@ import {
               href={'/blog'}>
               Blog
             </Button>
-            <Button
-              as={'a'}
+            <Menu>
+            <MenuButton
+              as={Button}
               fontSize={'sm'}
               fontWeight={400}
-              variant={'link'}
-              href={'/resources'}>
+              variant={'link'}>
               Resources
-            </Button>
+            </MenuButton>
+            <MenuList>
+              <MenuItem as={Link} href={'/resources/academic-articles'}>
+                Academic Articles
+              </MenuItem>
+              <MenuItem as={Link} href={'/resources/downloadable-guides'}>
+                Downloadable Guides
+              </MenuItem>
+              <MenuItem as={Link} href={'/resources/webinars-workshops'}>
+                Webinars and Workshops
+              </MenuItem>
+              <MenuItem as={Link} href={'/resources/success'}>
+                Success Stories
+              </MenuItem>
+            </MenuList>
+          </Menu>
             <Button
               as={'a'}
               fontSize={'sm'}
