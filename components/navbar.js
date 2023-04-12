@@ -96,7 +96,7 @@ export default function Navbar() {
                 <MenuItem as={Link} href={'/resources/downloadable-guides'}>
                   Downloadable Guides
                 </MenuItem>
-                <MenuItem as={Link} href={'/resources/webinars-workshops'}>
+                <MenuItem as={Link} href={'/resources/workshops'}>
                   Webinars and Workshops
                 </MenuItem>
                 <MenuItem as={Link} href={'/resources/success'}>
