@@ -3,22 +3,22 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
-  Link,
+  Button,
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
-  MenuButton,
   Menu,
+  MenuButton,
   MenuList,
   MenuItem,
+  Link,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react';
 
-import {
-  HamburgerIcon,
-} from '@chakra-ui/icons'
+import {   HamburgerIcon } from '@chakra-ui/icons'
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -52,79 +52,89 @@ export default function Navbar() {
         </Flex>
 
         <Collapse in={!isOpen} animateOpacity>
-          <Stack
+          <Wrap
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
-            direction={'row'}
-            spacing={6}>
-            <Button
-              as={'a'}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'/'}>
-              Home
-            </Button>
-            <Button
-              as={'a'}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'/about'}>
-              About
-            </Button>
-            <Button
-              as={'a'}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'/blog'}>
-              Blog
-            </Button>
-            <Menu>
-              <MenuButton
-                as={Button}
+            spacing={6}
+            align={'center'}>
+            <WrapItem>
+              <Button
+                as={'a'}
                 fontSize={'sm'}
                 fontWeight={400}
-                variant={'link'}>
-                Resources
-              </MenuButton>
-              <MenuList>
-                <MenuItem as={Link} href={'/resources/academic-articles'}>
-                  Academic Articles
-                </MenuItem>
-                <MenuItem as={Link} href={'/resources/guides'}>
-                  Downloadable Guides
-                </MenuItem>
-                <MenuItem as={Link} href={'/resources/workshops'}>
-                  Webinars and Workshops
-                </MenuItem>
-                <MenuItem as={Link} href={'/resources/success'}>
-                  Success Stories
-                </MenuItem>
-              </MenuList>
-            </Menu>
-            <Menu>
-              <MenuButton
-                as={Button}
+                variant={'link'}
+                href={'/'}>
+                Home
+              </Button>
+            </WrapItem>
+            <WrapItem>
+              <Button
+                as={'a'}
                 fontSize={'sm'}
                 fontWeight={400}
-                variant={'link'}>
-                Services
-              </MenuButton>
-              <MenuList>
-                <MenuItem as={Link} href={'/services/development'}>
-                  Professional Development
-                </MenuItem>
-                <MenuItem as={Link} href={'/services/training'}>
-                  Customized Training & Support
-                </MenuItem>
-                <MenuItem as={Link} href={'/services/contact'}>
-                  Contact
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </Stack>
+                variant={'link'}
+                href={'/about'}>
+                About
+              </Button>
+            </WrapItem>
+            <WrapItem>
+              <Button
+                as={'a'}
+                fontSize={'sm'}
+                fontWeight={400}
+                variant={'link'}
+                href={'/blog'}>
+                Blog
+              </Button>
+            </WrapItem>
+            <WrapItem>
+              <Menu>
+                <MenuButton
+                  as={Button}
+                  fontSize={'sm'}
+                  fontWeight={400}
+                  variant={'link'}>
+                  Resources
+                </MenuButton>
+                <MenuList>
+                  <MenuItem as={Link} href={'/resources/academic-articles'}>
+                    Academic Articles
+                  </MenuItem>
+                  <MenuItem as={Link} href={'/resources/guides'}>
+                    Downloadable Guides
+                  </MenuItem>
+                  <MenuItem as={Link} href={'/resources/workshops'}>
+                    Webinars and Workshops
+                  </MenuItem>
+                  <MenuItem as={Link} href={'/resources/success'}>
+                    Success Stories
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+            </WrapItem>
+            <WrapItem>
+              <Menu>
+                <MenuButton
+                  as={Button}
+                  fontSize={'sm'}
+                  fontWeight={400}
+                  variant={'link'}>
+                  Services
+                </MenuButton>
+                <MenuList>
+                  <MenuItem as={Link} href={'/services/development'}>
+                    Professional Development
+                  </MenuItem>
+                  <MenuItem as={Link} href={'/services/training'}>
+                    Customized Training & Support
+                  </MenuItem>
+                  <MenuItem as={Link} href={'/services/contact'}>
+                    Contact
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+            </WrapItem>
+          </Wrap>
         </Collapse>
       </Flex>
     </Box>
