@@ -104,14 +104,26 @@ export default function Navbar() {
                 </MenuItem>
               </MenuList>
             </Menu>
-            <Button
-              as={'a'}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'/services'}>
-              Services
-            </Button>
+            <Menu>
+              <MenuButton
+                as={Button}
+                fontSize={'sm'}
+                fontWeight={400}
+                variant={'link'}>
+                Services
+              </MenuButton>
+              <MenuList>
+                <MenuItem as={Link} href={'/services/development'}>
+                  Professional Development
+                </MenuItem>
+                <MenuItem as={Link} href={'/services/training'}>
+                  Customized Training & Support
+                </MenuItem>
+                <MenuItem as={Link} href={'/services/contact'}>
+                  Contact
+                </MenuItem>
+              </MenuList>
+            </Menu>
           </Stack>
         </Collapse>
       </Flex>
