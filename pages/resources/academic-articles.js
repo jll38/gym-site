@@ -50,7 +50,7 @@ export default function Articles({ allPostsData }) {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <Container minH={'52vh'} m='auto' w='1000px'>
+            <Container minH={'52vh'} m='auto'>
                 <Heading fontSize={{ base: '2xl', sm: '3xl', lg: '5xl' }} mb={'5'}>Academic Articles</Heading>
                 <section className={` ${utilStyles.articleSections}`}>
                     <Heading fontSize={{ base: 'xl', sm: '2xl', lg: '3xl' }}>Agile and Lean Principles in Education</Heading>
