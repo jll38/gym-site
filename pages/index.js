@@ -36,21 +36,11 @@ export default function Home({ allPostsData }) {
             fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
             <Text
               as={'span'}
-              position={'relative'}
-              _after={{
-                content: "''",
-                width: 'full',
-                height: '30%',
-                position: 'absolute',
-                bottom: 1,
-                left: 0,
-                bg: 'red.400',
-                zIndex: -1,
-              }}>
+              position={'relative'}>
               MyWebClass.org
             </Text>
             <br />
-            <Text as={'span'} color={'red.400'} fontSize={{ base: 'xl', md: '2xl', lg:'3xl'}}>
+            <Text as={'span'} color={'gray.600'} fontSize={{ base: 'xl', md: '2xl', lg:'3xl'}}>
             Empowering the Future of Education
             </Text>
           </Heading>
@@ -67,8 +57,8 @@ export default function Home({ allPostsData }) {
               fontWeight={'normal'}
               px={6}
               colorScheme={'red'}
-              bg={'red.400'}
-              _hover={{ bg: 'red.500' }}>
+              bg={'gray.600'}
+              _hover={{ bg: 'gray.700' }}>
               Get started
             </Button>
           </Stack>

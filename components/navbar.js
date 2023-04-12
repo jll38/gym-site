@@ -16,6 +16,7 @@ import {
   Link,
   Wrap,
   WrapItem,
+  Image
 } from '@chakra-ui/react';
 
 import {   HamburgerIcon } from '@chakra-ui/icons'
@@ -43,12 +44,10 @@ export default function Navbar() {
           onClick={onToggle}
         />
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'Helvetica'}
-            color={useColorModeValue('gray.800', 'white')}>
-            MyWebClass.org
-          </Text>
+        <Link href='/'><Image 
+          src='../images/mywebclass_logo-1.png'
+          w='50px'
+          ></Image></Link>
         </Flex>
 
         <Collapse in={!isOpen} animateOpacity>

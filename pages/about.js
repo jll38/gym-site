@@ -25,32 +25,49 @@ export default function About({ allPostsData }) {
             <title>{aboutTitle}</title>
          </Head>
          <Container minH='55vh' maxW={'1000px'}>
-            <section name="Who we are">
-               <Box textAlign={'center'} mt={'20'}>
-            <Image
-              alt={'MyWebClass.org Logo'}
-              fit={'cover'}
-              align={'center'}
-              w={'100%'}
-              h={'400px'}
-              src={
-                'images/logo-black.png'
-              }
-            />
-                  <Box>
-                     <Heading>WHO WE ARE</Heading>
-                  </Box>
-                  <Text>Welcome to MyWebClass.org, a foundation committed
-                     to revolutionizing education for the AI-driven world.
-                     As we navigate the challenges and opportunities
-                     of the Fourth Industrial Revolution, it is crucial to
-                     reimagine our educational practices and adopt a new paradigm
-                     that empowers our students with the knowledge and skills they
-                     need to flourish in an increasingly complex and interconnected
-                     world</Text>
-               </Box>
+            <section name="Workshops Header">
+               <Stack
+                  align={'center'}
+                  spacing={{ base: 8, md: 10 }}
+                  py={{ base: 18, md: 26 }}
+                  direction={{ base: 'column', md: 'row' }}>
+                  <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+                     <Heading>Who We Are</Heading>
+                     <Text>Welcome to MyWebClass.org, a foundation committed 
+                        to revolutionizing education for the AI-driven world.
+                         As we navigate the challenges and opportunities of 
+                         the Fourth Industrial Revolution, it is crucial to 
+                         reimagine our educational practices and adopt a new 
+                         paradigm that empowers our students with the knowledge
+                          and skills they need to flourish in an increasingly 
+                          complex and interconnected world</Text>
+                  </Stack>
+                  <Flex
+                     flex={1}
+                     justify={'center'}
+                     align={'center'}
+                     position={'relative'}
+                     w={'full'}>
+                     <Box
+                        position={'relative'}
+                        height={'400px'}
+                        width={'full'}
+                        overflow={'hidden'}>
+                        <Image
+                           alt={'A webinar taking place on the computer screen'}
+                           fit={'cover'}
+                           align={'center'}
+                           w={'100%'}
+                           h={'450px'}
+                           src={
+                              '../images/mywebclass_logo-2.png'
+                           }
+                        />
+                     </Box>
+                  </Flex>
+               </Stack>
             </section>
-            <Box p={4} mt={'10'}>
+            <Box p={4}>
                <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                   <Feature
                      title={'Our Mission'}
@@ -76,22 +93,22 @@ export default function About({ allPostsData }) {
                         'We are proud to partner with schools, organizations, and other stakeholders committed to transforming education. Our partnerships enable us to collaborate on initiatives that drive innovation in education and promote continuous improvement.'
                      }
                   />
-                  
+
 
                </SimpleGrid>
             </Box>
             <Box textAlign={'center'}>
-            <section name="Blog" >
-               <Heading my={'2'}>Blog</Heading>
-               <Text>
-                  Our blog provides insights, tips, and resources on Agile and
-                  Lean principles in education, as well as updates on our
-                  initiatives and partnerships. We invite you to explore
-                  our blog and join the conversation on transforming education.
-                  <br/>
-                  <a href='/blog' className={utilStyles.articleLink}>Click here to view our blog</a>
-               </Text>
-            </section>
+               <section name="Blog" >
+                  <Heading my={'2'}>Blog</Heading>
+                  <Text>
+                     Our blog provides insights, tips, and resources on Agile and
+                     Lean principles in education, as well as updates on our
+                     initiatives and partnerships. We invite you to explore
+                     our blog and join the conversation on transforming education.
+                     <br />
+                     <a href='/blog' className={utilStyles.articleLink}>Click here to view our blog</a>
+                  </Text>
+               </section>
             </Box>
          </Container>
       </Layout>

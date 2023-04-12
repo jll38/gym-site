@@ -22,7 +22,7 @@ export default function Blog({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <Container minH={'52vh'}>
+      <Container minH={'52vh'} textAlign='center'>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <Heading className={utilStyles.headingLg}>Blog</Heading>
         <Divider mb='5'></Divider>

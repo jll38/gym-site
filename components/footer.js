@@ -6,6 +6,9 @@ import {
   Stack,
   Text,
   useColorModeValue,
+  Image,
+  Wrap,
+  Center
 } from '@chakra-ui/react';
 
 const ListHeader = ({ children }) => {
@@ -27,7 +30,15 @@ export default function Footer() {
           spacing={8}>
           <Stack spacing={6}>
             <Box>
+              <Wrap>
+              <Link href='/'><Image
+                src='../images/mywebclass_logo-1.png'
+                w='50px'
+              ></Image></Link>
+              <Center>
               <Text fontWeight={'700'} fontSize={'lg'}>MyWebClass.org</Text>
+              </Center>
+              </Wrap>
             </Box>
             <Text fontSize={'sm'}>
               © 2023 MyWebClass.org. All rights reserved
