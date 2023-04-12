@@ -58,10 +58,12 @@ export default function Development({ allPostsData }) {
                                 <FormControl>
                                     <FormLabel fontSize={{md: 'lg', lg: 'xl', xl : '2xl'}}>Name</FormLabel>
                                     <Input type='text' placeholder='John Doe'></Input>
+                                    <FormLabel fontSize={{md: 'lg', lg: 'xl', xl : '2xl'}}>Subject</FormLabel>
+                                    <Input type='text' placeholder='Customized Training'></Input>
                                     <FormLabel fontSize={{md: 'lg', lg: 'xl', xl : '2xl'}}>Email</FormLabel>
                                     <Input type='text' placeholder='example@example.com'></Input>
                                     <FormLabel fontSize={{md: 'lg', lg: 'xl', xl : '2xl'}}>Message</FormLabel>
-                                    <Textarea h='250px' resize={'none'}></Textarea>
+                                    <Textarea h='180px' resize={'none'}></Textarea>
                                     <Button>Send</Button>
                                 </FormControl>
                             </Box>

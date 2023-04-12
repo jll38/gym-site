@@ -15,7 +15,8 @@ import {
     Image,
     Divider,
     HStack,
-    others
+    others,
+    Center
 } from '@chakra-ui/react';
 
 export default function Articles({ allPostsData }) {
@@ -50,8 +51,10 @@ export default function Articles({ allPostsData }) {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <Container minH={'52vh'} m='auto'>
+            <Container minH={'52vh'} m='auto' minW={'75%'} textAlign='center'>
                 <Heading fontSize={{ base: '2xl', sm: '3xl', lg: '5xl' }} mb={'5'}>Academic Articles</Heading>
+                {!agileArticles.length ? (<></>) : (
+                    <Center>
                 <section className={` ${utilStyles.articleSections}`}>
                     <Heading fontSize={{ base: 'xl', sm: '2xl', lg: '3xl' }}>Agile and Lean Principles in Education</Heading>
                     <Divider mb='5'></Divider>
@@ -67,8 +70,9 @@ export default function Articles({ allPostsData }) {
                         ))}
                     </ul>
                 </section>
+                </Center>)}
 
-                {!agileArticles.length ? (<></>) : (
+                {!neuroscienceArticles.length ? (<></>) : (
                     <section className={` ${utilStyles.articleSections}`}>
                     <Heading fontSize={{ base: 'xl', sm: '2xl', lg: '3xl' }}>Neuroscience and Education</Heading>
                     <Divider mb='5'></Divider>
@@ -152,7 +156,6 @@ export default function Articles({ allPostsData }) {
                         ))}
                     </ul>
                 </section>)}
-
             </Container>
 
         </Layout>
