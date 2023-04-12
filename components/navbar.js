@@ -116,14 +116,11 @@ export default function Navbar() {
                 <MenuItem as={Link} href={'/services/development'}>
                   Professional Development
                 </MenuItem>
-                <MenuItem as={Link} href={'/resources/guides'}>
-                  Downloadable Guides
+                <MenuItem as={Link} href={'/services/training'}>
+                  Customized Training & Support
                 </MenuItem>
-                <MenuItem as={Link} href={'/resources/workshops'}>
-                  Webinars and Workshops
-                </MenuItem>
-                <MenuItem as={Link} href={'/resources/success'}>
-                  Success Stories
+                <MenuItem as={Link} href={'/services/contact'}>
+                  Contact
                 </MenuItem>
               </MenuList>
             </Menu>
