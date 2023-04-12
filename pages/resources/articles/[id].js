@@ -1,8 +1,9 @@
-import Layout from '../../components/layout';
-import { getAllPostIds, getPostData } from '../../lib/articles';
+import Layout from '../../../components/layout';
+import { getAllPostIds, getPostData } from '../../../lib/articles';
+
 import Head from 'next/head';
-import Date from '../../components/date';
-import utilStyles from '../../styles/utils.module.css';
+import Date from '../../../components/date';
+import utilStyles from '../../../styles/utils.module.css';
 import { Divider, Box, Heading, Text, OrderedList, UnorderedList, ListItem } from '@chakra-ui/react';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
@@ -28,10 +29,12 @@ export default function Article({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <article>
-        <Heading as="h1" size="2xl" className={utilStyles.headingXl}>
+        <Box maxW='55%'>
+        <Heading as="h1" size="xl" className={utilStyles.headingXl} >
           {postData.title}
         </Heading>
         <Divider />
+        </Box>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
