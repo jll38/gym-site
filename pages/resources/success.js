@@ -27,11 +27,11 @@ export default function Success({ allPostsData}){
             <section name="Who we are">
                <Box textAlign={'center'}>
                <Image
-              alt={'Hero Image, Classroom full of students learning web development'}
+              alt={'mywebclass logo'}
               fit={'cover'}
               align={'center'}
               w={'100%'}
-              h={'350px'}
+              h={'200px'}
               src={
                 '../images/logo-black.png'
               }

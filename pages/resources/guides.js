@@ -15,29 +15,31 @@ import {
     Image,
     Divider,
     SimpleGrid,
+    List,
+    ListItem
 } from '@chakra-ui/react';
 
-export default function Workshops({ allPostsData }) {
+export default function Guides({ allPostsData }) {
     return (
         <Layout>
             <Head>
                 <title>{siteTitle}</title>
             </Head>
             <Container minH='55vh' maxW={'1000px'}>
-                <section name="Workshops Header">
+                <section name="Guides Header">
                     <Stack
                         align={'center'}
                         spacing={{ base: 8, md: 10 }}
                         py={{ base: 20, md: 28 }}
                         direction={{ base: 'column', md: 'row' }}>
                         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-                            <Heading>Webinars & Workshops</Heading>
-                            <Text>Join our webinars and workshops to learn 
-                                from experts and gain practical insights 
-                                into Agile and Lean principles in education. 
-                                Our webinars cover a range of topics and are 
-                                designed to provide educators with actionable 
-                                strategies for success</Text>
+                            <Heading>Downloadable Guides</Heading>
+                            <Text>Download our free guides and resources 
+                                to learn how to implement Agile and 
+                                Lean principles in your classroom. 
+                                Our guides cover a range of topics, 
+                                from project-based learning to Agile 
+                                methodologies in K-12 education.</Text>
                         </Stack>
                         <Flex
           flex={1}
@@ -53,13 +55,13 @@ export default function Workshops({ allPostsData }) {
             width={'full'}
             overflow={'hidden'}>
             <Image
-              alt={'A webinar taking place on the computer screen'}
+              alt={'Downloadable guide being displayed on computer screen'}
               fit={'cover'}
               align={'center'}
               w={'100%'}
               h={'400px'}
               src={
-                '../images/webinar.png'
+                '../images/downloadable-guides.png'
               }
             />
           </Box>

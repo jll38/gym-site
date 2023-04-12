@@ -93,7 +93,7 @@ export default function Navbar() {
                 <MenuItem as={Link} href={'/resources/academic-articles'}>
                   Academic Articles
                 </MenuItem>
-                <MenuItem as={Link} href={'/resources/downloadable-guides'}>
+                <MenuItem as={Link} href={'/resources/guides'}>
                   Downloadable Guides
                 </MenuItem>
                 <MenuItem as={Link} href={'/resources/workshops'}>
