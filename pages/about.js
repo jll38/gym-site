@@ -28,7 +28,7 @@ export default function About({ allPostsData }) {
             <section name="Who we are">
                <Box textAlign={'center'} mt={'20'}>
             <Image
-              alt={'Hero Image, Classroom full of students learning web development'}
+              alt={'MyWebClass.org Logo'}
               fit={'cover'}
               align={'center'}
               w={'100%'}
