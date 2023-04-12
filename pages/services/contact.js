@@ -61,7 +61,7 @@ export default function Development({ allPostsData }) {
                                     <FormLabel fontSize={{md: 'lg', lg: 'xl', xl : '2xl'}}>Email</FormLabel>
                                     <Input type='text' placeholder='example@example.com'></Input>
                                     <FormLabel fontSize={{md: 'lg', lg: 'xl', xl : '2xl'}}>Message</FormLabel>
-                                    <Textarea h='250px'></Textarea>
+                                    <Textarea h='250px' resize={'none'}></Textarea>
                                     <Button>Send</Button>
                                 </FormControl>
                             </Box>
