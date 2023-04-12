@@ -50,7 +50,7 @@ export default function Articles({ allPostsData }) {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <Container minH={'52vh'} mx='10' w='1000px'>
+            <Container minH={'52vh'} m='auto' w='1000px'>
                 <Heading fontSize={{ base: '2xl', sm: '3xl', lg: '5xl' }} mb={'5'}>Academic Articles</Heading>
                 <section className={` ${utilStyles.articleSections}`}>
                     <Heading fontSize={{ base: 'xl', sm: '2xl', lg: '3xl' }}>Agile and Lean Principles in Education</Heading>
@@ -75,7 +75,7 @@ export default function Articles({ allPostsData }) {
                     <ul className={utilStyles.list}>
                         {neuroscienceArticles.map(({ id, date, title }) => (
                             <li className={utilStyles.listItem} key={id}>
-                                <Link href={`/posts/${id}`}>{title}</Link>
+                                <Link href={`articles/${id}`}>{title}</Link>
                                 <br />
                                 <small className={utilStyles.lightText}>
                                     <Date dateString={date} />
@@ -92,7 +92,7 @@ export default function Articles({ allPostsData }) {
                     <ul className={utilStyles.list}>
                         {aiRevolutions.map(({ id, date, title }) => (
                             <li className={utilStyles.listItem} key={id}>
-                                <Link href={`/posts/${id}`}>{title}</Link>
+                                <Link href={`articles/${id}`}>{title}</Link>
                                 <br />
                                 <small className={utilStyles.lightText}>
                                     <Date dateString={date} />
@@ -109,7 +109,7 @@ export default function Articles({ allPostsData }) {
                         <ul className={utilStyles.list}>
                             {innovativeTeaching.map(({ id, date, title }) => (
                                 <li className={utilStyles.listItem} key={id}>
-                                    <Link href={`/posts/${id}`}>{title}</Link>
+                                    <Link href={`articles/${id}`}>{title}</Link>
                                     <br />
                                     <small className={utilStyles.lightText}>
                                         <Date dateString={date} />
@@ -127,7 +127,7 @@ export default function Articles({ allPostsData }) {
                         <ul className={utilStyles.list}>
                             {cognitiveMentalHealth.map(({ id, date, title }) => (
                                 <li className={utilStyles.listItem} key={id}>
-                                    <Link href={`/posts/${id}`}>{title}</Link>
+                                    <Link href={`articles/${id}`}>{title}</Link>
                                     <br />
                                     <small className={utilStyles.lightText}>
                                         <Date dateString={date} />
@@ -143,7 +143,7 @@ export default function Articles({ allPostsData }) {
                     <ul className={utilStyles.list}>
                         {other.map(({ id, date, title }) => (
                             <li className={utilStyles.listItem} key={id}>
-                                <Link href={`/posts/${id}`}>{title}</Link>
+                                <Link href={`articles/${id}`}>{title}</Link>
                                 <br />
                                 <small className={utilStyles.lightText}>
                                     <Date dateString={date} />

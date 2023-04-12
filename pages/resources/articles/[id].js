@@ -29,7 +29,7 @@ export default function Article({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <article>
-        <Box maxW='50%'>
+        <Box maxW='55%'>
         <Heading as="h1" size="xl" className={utilStyles.headingXl} >
           {postData.title}
         </Heading>
