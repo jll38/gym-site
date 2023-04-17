@@ -1,0 +1,30 @@
+name: Accessibility Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  accessibility-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14.x'
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        npm install pngquant --ignore-scripts
+        npm install
+        npx playwright install chromium
+    - name: Run accessibility tests
+      run: npx playwright test tests/accessibility
+
+    - name: Generate accessibility report
+      uses: mikepenz/action-junit-report@v2
+      with:
+        report_paths: '**/test-results/**/*.xml'
+        github_context: ${{ toJson(github) }}
