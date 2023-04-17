@@ -33,7 +33,7 @@ export default function Footer() {
               <Wrap>
               <Link href='/'><Image
                 src='../images/mywebclass_logo-1.png'
-                w='50px'
+                w='75px'
               ></Image></Link>
               <Center>
               <Text fontWeight={'700'} fontSize={'lg'}>MyWebClass.org</Text>
