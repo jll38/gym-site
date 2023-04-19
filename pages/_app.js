@@ -2,19 +2,11 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { initGA, logPageView } from "../lib/analytics";
 import { ChakraProvider } from "@chakra-ui/react";
+import useGoogleAnalytics from "../lib/useGoogleAnalytics";
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
 
-  useEffect(() => {
-    initGA();
-    logPageView();
-    router.events.on("routeChangeComplete", logPageView);
-
-    return () => {
-      router.events.off("routeChangeComplete", logPageView);
-    };
-  }, []);
+  useGoogleAnalytics('G-D8VNDF0M79');
 
   return (
     <ChakraProvider>
