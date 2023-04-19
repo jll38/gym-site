@@ -1,22 +1,21 @@
 import '../styles/global.css'
 import { ChakraProvider } from '@chakra-ui/react'
-import { useEffect } from 'react';
-import Router from 'next/router';
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { initGA, logPageView } from '../lib/analytics'
 
 export default function App({ Component, pageProps }) {
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      window.gtag('config', 'G-D8VNDF0M79', {
-        page_path: url,
-      });
-    };
+  const router = useRouter()
 
-    Router.events.on('routeChangeComplete', handleRouteChange);
+  useEffect(() => {
+    initGA()
+    logPageView()
+    router.events.on('routeChangeComplete', logPageView)
 
     return () => {
-      Router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, []);
+      router.events.off('routeChangeComplete', logPageView)
+    }
+  }, [])
 
   return (
   <ChakraProvider>
