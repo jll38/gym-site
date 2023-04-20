@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { initGA, logPageView } from "../lib/analytics";
 import { ChakraProvider } from "@chakra-ui/react";
 function MyApp({ Component, pageProps }) {
-
+  const router = useRouter()
   useEffect(() => {
     const handleRouteChange = (url) => {
       pageview(url);
