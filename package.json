@@ -29,6 +29,7 @@
     "remark-html": "^15.0.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.6.1",
     "@playwright/test": "^1.32.1",
     "lighthouse": "^10.1.0",
     "node-fetch": "^3.3.1",
