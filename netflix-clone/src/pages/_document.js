@@ -9,6 +9,7 @@ export default function Document() {
           src="https://kit.fontawesome.com/a7908c27f8.js"
           crossorigin="anonymous"
         ></script>
+        
       </Head>
 
       <body>
