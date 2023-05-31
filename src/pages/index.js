@@ -45,12 +45,17 @@ export default function Home() {
         </nav>
         <div className="flex justify-center mx-auto">
           <div className="h-[80vh] overflow-hidden z-0 bg-[url('/images/landing.jpeg')] bg-contain sm:bg-cover bg-no-repeat w-screen">
-            <div className="text-center sm:text-left sm:ml-24 w-fullflex items-center relative top-24 sm:top-60 ">
-              <h1 className="text-white font-bold text-[2em] sm:text-[4em] md:text-[5em] [text-shadow:_0_6px_0_rgb(0_0_0_/_40%)]">
+            <div className="text-center sm:text-left sm:ml-24 w-fullflex items-center relative top-24 sm:top-50">
+              <div className="flex justify-between w-1/4 text-3xl text-gray-200 ">
+                <i className="fa-solid fa-star "></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <h1 className="text-white font-bold text-[2em] sm:text-[4em] md:text-[5em] [text-shadow:_0_6px_0_rgb(0_0_0_/_40%)] w-1/2">
                 UNLOCK YOUR GREATNESS
               </h1>
               <div className="text-gray-300 text-[1em] sm:text-[1.2em] md:text-[2em] [text-shadow:_0_3px_0_rgb(0_0_0_/_40%)]">
-                Membership starting from $50 Per Month
+                Memberships starting from $50 Per Month
               </div>
             </div>
           </div>
@@ -89,7 +94,7 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-black/95 flex flex-col ">
-          <div className="h-[850px] flex justify-center gap-10 text-gray-400 flex-wrap  ">
+          <div className="h-[600px] flex justify-center gap-10 text-gray-400 flex-wrap">
             <div className="h-[450px] min-w-[300px] max-w-[300px]w w-[300px] hover:text-gray-200 hover:bg-gray-200/5">
               <div
                 name="cardHead"
@@ -146,6 +151,37 @@ export default function Home() {
                 </button>
               </div>
             </div>
+
+            <div className="h-[450px] min-w-[300px] max-w-[300px]w w-[300px] hover:text-gray-200 hover:bg-gray-200/5">
+              <div
+                name="cardHead"
+                className="h-1/3 flex flex-col justify-center items-center"
+              >
+                <i class="fa-solid fa-temperature-arrow-up text-6xl pb-4"></i>
+                <h3 className="text-[1.5em]">Sauna & Spa</h3>
+                <div className="h-1 w-1/2 bg-gray-400 mt-2"></div>
+              </div>
+              <div
+                name="cardBody"
+                className="flex flex-col justify-center items-center"
+              >
+                <p className="break-words w-[275px]">
+                  Energize your body and mind at the Atlas Gym Juice Bar.
+                  Discover our wide variety of fresh smoothies, specifically
+                  designed to aid in recovery, fuel your workout, or simply to
+                  refresh you on a hot day. Our offerings are prepared
+                  on-the-spot, using only the highest quality fruits,
+                  vegetables, and whey protein.
+                </p>
+              </div>
+              <div name="cardFooter" className="px-3 h-full">
+                <button className="text-gray-200 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg ">
+                  View
+                </button>
+              </div>
+            </div>
+
+            
           </div>
         </div>
       </main>
