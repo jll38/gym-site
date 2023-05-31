@@ -55,33 +55,98 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center bg-black/90">
-          <div className=" h-[425px] py-24 flex gap-[20rem] text-gray-200">
-          <div className="">
-            <div className="text-[3em]">Welcome to</div>
-            <h2 className="text-[4em] font-bold">ATLAS GYM</h2>
-            <div className="text-[2em]">
-              View our{" "}
-              <Link
-                className="underline hover:text-gray-400"
-                href="/memberships"
-              >
-                Membership Plans
-              </Link>
+        <div className="bg-black/95">
+          <div className="flex justify-center">
+            <div className=" h-[425px] py-24 flex gap-[20rem] text-gray-200">
+              <div className="">
+                <div className="text-[3em]">Welcome to</div>
+                <h2 className="text-[4em] font-bold">ATLAS GYM</h2>
+                <div className="text-[2em]">
+                  View our{" "}
+                  <Link
+                    className="underline hover:text-gray-400"
+                    href="/memberships"
+                  >
+                    Membership Plans
+                  </Link>
+                </div>
+              </div>
+              <div className="aspect-video">
+                <iframe
+                  src={"https://www.youtube.com/embed/Y5RtQ4cawVk"}
+                  title={"Atlas Gym"}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           </div>
-          <div className="aspect-video">
-            <iframe
-              src={"https://www.youtube.com/embed/Y5RtQ4cawVk"}
-              title={"Atlas Gym"}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            ></iframe>
+          <div className="pb-5 px-[10em]">
+            <div className="h-1 w-full bg-gray-200"></div>
+            <div className="h-1 w-full bg-red-500"></div>
           </div>
         </div>
+        <div className="bg-black/95 flex flex-col ">
+          <div className="h-[850px] flex justify-center gap-10 text-gray-400 flex-wrap  ">
+            <div className="h-[450px] min-w-[300px] max-w-[300px]w w-[300px] hover:text-gray-200 hover:bg-gray-200/5">
+              <div
+                name="cardHead"
+                className="h-1/3 flex flex-col justify-center items-center"
+              >
+                <i class="fa-solid fa-dumbbell text-6xl pb-4  "></i>
+                <h3 className="text-[1.5em]">Personalized Training</h3>
+                <div className="h-1 w-1/2 bg-gray-400 mt-2"></div>
+              </div>
+              <div
+                name="cardBody"
+                className="flex flex-col justify-center items-center"
+              >
+                <p className="break-words w-[275px]">
+                  Atlas Gym is proud to offer personalized training services
+                  designed to propel you towards your unique fitness goals. Our
+                  team of professional trainers utilizes cutting-edge technology
+                  and individualized programs to provide a workout regimen
+                  tailored specifically to you.
+                </p>
+              </div>
+              <div name="cardFooter" className="px-3 pt-4">
+                <button className="text-gray-200 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg">
+                  View
+                </button>
+              </div>
+            </div>
 
+            <div className="h-[450px] min-w-[300px] max-w-[300px]w w-[300px] hover:text-gray-200 hover:bg-gray-200/5">
+              <div
+                name="cardHead"
+                className="h-1/3 flex flex-col justify-center items-center"
+              >
+                <i class="fa-solid fa-martini-glass-empty text-6xl pb-4"></i>
+                <h3 className="text-[1.5em]">Juice Bar</h3>
+                <div className="h-1 w-1/2 bg-gray-400 mt-2"></div>
+              </div>
+              <div
+                name="cardBody"
+                className="flex flex-col justify-center items-center"
+              >
+                <p className="break-words w-[275px]">
+                  Energize your body and mind at the Atlas Gym Juice Bar.
+                  Discover our wide variety of fresh smoothies, specifically
+                  designed to aid in recovery, fuel your workout, or simply to
+                  refresh you on a hot day. Our offerings are prepared
+                  on-the-spot, using only the highest quality fruits,
+                  vegetables, and whey protein.
+                </p>
+              </div>
+              <div name="cardFooter" className="px-3 h-full">
+                <button className="text-gray-200 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg ">
+                  View
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </>
