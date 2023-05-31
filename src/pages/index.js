@@ -1,3 +1,4 @@
+import { Navbar } from './../components/Navbar';
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
@@ -24,25 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <nav
-          id="nav"
-          className="flex justify-start bg-black px-10 text-gray-300 gap-5 shadow-md shadow-gray-900/75"
-        >
-          <div className="ml-6 sm:ml-[16%] h-20 w-36 relative">
-            <Image
-              className="object-contain"
-              src="/images/atlas-logo.png"
-              layout="fill"
-            />
-          </div>
-
-          <div className="md:ml-[10%] flex gap-2 sm:gap-10 md:gap-20">
-            <button className="hover:text-gray-200">About</button>
-            <button className="hover:text-gray-200">Services</button>
-            <button className="hover:text-gray-200">Atlas Crossfit</button>
-            <button className="hover:text-gray-200">Shop</button>
-          </div>
-        </nav>
+        <Navbar     />
         <div className="flex justify-center mx-auto">
           <div className="h-[80vh] overflow-hidden z-0 bg-[url('/images/landing.jpeg')] bg-contain sm:bg-cover bg-no-repeat w-screen">
             <div className="text-center sm:text-left sm:ml-24 w-fullflex items-center relative top-24 sm:top-50">
