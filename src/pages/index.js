@@ -1,4 +1,6 @@
-import { Navbar } from './../components/Navbar';
+import { TrainerBox } from "./../components/trainer-box";
+import { Navbar } from "./../components/Navbar";
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
@@ -9,6 +11,9 @@ import styles from "@/styles/Home.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+
+  const [currTrainer, setcurrTrainer] = useState("Marcus");
+
   const videoOpts = {
     height: "390",
     width: "640",
@@ -25,7 +30,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Navbar     />
+        <Navbar />
         <div className="flex justify-center mx-auto">
           <div className="h-[80vh] overflow-hidden z-0 bg-[url('/images/landing.jpeg')] bg-contain sm:bg-cover bg-no-repeat w-screen">
             <div className="text-center sm:text-left sm:ml-24 w-fullflex items-center relative top-24 sm:top-50">
@@ -71,12 +76,13 @@ export default function Home() {
               </div>
             </div>
           </div>
+
           <div className="pb-5 px-[10em]">
             <div className="h-1 w-full bg-gray-200"></div>
             <div className="h-1 w-full bg-red-500"></div>
           </div>
         </div>
-        <div className="bg-black/95 flex flex-col ">
+        <div className="bg-black/95 flex flex-col">
           <div className="h-[600px] flex justify-center gap-10 text-gray-400 flex-wrap">
             <div className="h-[450px] min-w-[300px] max-w-[300px]w w-[300px] hover:text-gray-200 hover:bg-gray-200/5">
               <div
@@ -128,7 +134,7 @@ export default function Home() {
                   vegetables, and whey protein.
                 </p>
               </div>
-              <div name="cardFooter" className="px-3 h-full">
+              <div name="cardFooter" className="px-3">
                 <button className="text-gray-200 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg ">
                   View
                 </button>
@@ -157,15 +163,30 @@ export default function Home() {
                   vegetables, and whey protein.
                 </p>
               </div>
-              <div name="cardFooter" className="px-3 h-full">
+              <div name="cardFooter" className="px-3">
                 <button className="text-gray-200 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg ">
                   View
                 </button>
               </div>
             </div>
-
-            
           </div>
+        </div>
+
+        <div className="bg-black/95 flex flex-col pb-10">
+          <div className="h-[600px] flex justify-center gap-10 text-gray-400 flex-wrap">
+            <div className="grid md:grid-cols-2  gap-10 md:gap-0">
+              <TrainerBox h={600} w={400} img="/images/trainers/marcus.png" />
+              <div className="grid grid-cols-2">
+                <TrainerBox name="Marcus" selected img="/images/trainers/marcus.png" />
+                <TrainerBox name="Fred" img="/images/trainers/fred.jpeg" />
+                <TrainerBox name="Alyssa" img="/images/trainers/alyssa.jpg" />
+                <TrainerBox name="John" img="/images/trainers/fred.jpeg" />
+                <TrainerBox name="Jane" img="/images/trainers/fred.jpeg" />
+                <TrainerBox name="Nick" img="/images/trainers/fred.jpeg" />
+              </div>
+            </div>
+          </div>
+          <div></div>
         </div>
       </main>
     </>
