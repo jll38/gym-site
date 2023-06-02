@@ -1,3 +1,4 @@
+import { Footer } from "./../components/footer";
 import { TrainerBox } from "./../components/trainer-box";
 import { Navbar } from "./../components/Navbar";
 import { useState } from "react";
@@ -32,23 +33,23 @@ export default function Home() {
       <main className="bg-black">
         <Navbar />
         <div className="flex justify-center items-center mx-auto">
-          <div className="h-[80vh] overflow-hidden z-0 bg-[url('/images/landing.jpeg')] bg-cover bg-no-repeat w-screen">
+          <div className="h-[80vh] overflow-hidden z-0 bg-[url('/images/mecca.jpeg')] bg-cover bg-no-repeat w-screen">
             <div
               name="bgChild"
               className="relative flex flex-col justify-center items-center text-center  w-full h-full bottom-10"
             >
               <div className="border-4 px-5 py-10">
-              <div className="flex justify-between text-5xl text-white mx-36 [text-shadow:_0_4px_0_rgb(0_0_0_/_40%)]">
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
-              </div>
-              <h1 className="text-white font-bold text-[3em] sm:text-[4em] [text-shadow:_0_6px_4px_rgb(0_0_0_/_40%)]">
-                UNLOCK YOUR GREATNESS
-              </h1>
-              <div className="text-gray-100 text-[1.5em] sm:text-[1.2em] md:text-[2em] [text-shadow:_0_3px_3px_rgb(0_0_0_/_40%)]">
-                Memberships Plans starting from $39.99/Month!
-              </div>
+                <div className="flex justify-between text-5xl text-white mx-36 [text-shadow:_0_4px_0_rgb(0_0_0_/_40%)]">
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                </div>
+                <h1 className="text-white font-bold text-[3em] sm:text-[4em] [text-shadow:_0_6px_4px_rgb(0_0_0_/_40%)]">
+                  UNLOCK YOUR GREATNESS
+                </h1>
+                <div className="text-gray-100 text-[1.5em] sm:text-[1.2em] md:text-[2em] [text-shadow:_0_3px_3px_rgb(0_0_0_/_40%)]">
+                  Memberships Plans starting from $39.99/Month!
+                </div>
               </div>
             </div>
           </div>
@@ -58,67 +59,40 @@ export default function Home() {
             <div className="text-sm uppercase tracking-[.5em]">
               Closest Location
             </div>
-            <div className="text-2xl pt-2 pb-4 tracking-[.1em]">
-              Your Local Atlas Club&nbsp;
+            <div className="text-lg sm:text-2xl pt-2 pb-4 tracking-[.1em]">
+              Your Local Atlas Gym&nbsp;
               <span>
                 <i class="fa-solid fa-location-dot"></i>&nbsp;
-                <button className="hover:tracking-[.15em] transition-all duration-300">{localAtlas}</button>&nbsp;
+                <button className="hover:tracking-[.15em] transition-all duration-300">
+                  {localAtlas}
+                </button>
+                &nbsp;
                 <button className="uppercase text-xs">Change</button>
               </span>
             </div>
             <div className="flex justify-center">
               <div className="flex gap-4 ">
-                <button className="w-52 h-14 bg-white uppercase text-red-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300">Get Details</button>
-                <button className="w-36 h-14 bg-white uppercase text-orange-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300">JOIN NOW</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="bg-black/95">
-          <div className="flex justify-center mb-20">
-            <div className=" h-[425px] py-24 flex sm:flex-row flex-col gap-[2rem] md:gap-[4rem] lg:gap-[20rem] text-gray-200">
-              <div className="text-center sm:text-left">
-                <div className="text-[2em] sm:text-[3em]">Welcome to</div>
-                <h2 className="text-[3em] sm:text-[4em] font-bold">
-                  ATLAS GYM
-                </h2>
-                <div className="text-[1.3em] sm:text-[2em]">
-                  View our{" "}
-                  <Link
-                    className="underline hover:text-gray-400"
-                    href="/memberships"
-                  >
-                    Membership Plans
-                  </Link>
-                </div>
-                <button
-                  onClick={() => {
-                    window.location.assign("/shop");
-                  }}
-                  className="mt-4 text-gray-200 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg"
-                >
-                  Shop Merchandise
+                <button className="w-52 h-14 bg-white uppercase text-red-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300">
+                  Get Details
+                </button>
+                <button className="w-36 h-14 bg-white uppercase text-orange-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300">
+                  JOIN NOW
                 </button>
               </div>
-              <div className="aspect-video">
-                <iframe
-                  src={"https://www.youtube.com/embed/Y5RtQ4cawVk"}
-                  title={"Atlas Gym"}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
             </div>
           </div>
-
-          <div className="mx-10 sm:mx-24">
-            <hr className="my-6 border-red-500 sm:mx-auto lg:my-8 " />
-          </div>
         </div>
-        <div className="bg-black/95 flex flex-col">
-          <div className=" flex justify-center gap-10 text-gray-400 flex-wrap">
+        <div className="bg-black/95 flex flex-col mt-2">
+          <div className="text-white text-center text-2xl my-10 tracking-[.1em] uppercase flex justify-center items-center gap-2">
+            <span>
+              <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
+            </span>
+            Our Services
+            <span>
+              <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
+            </span>
+          </div>
+          <div className="flex justify-center gap-10 text-gray-400 flex-wrap">
             <div className="h-[450px] min-w-[300px] max-w-[300px]w w-[300px] hover:text-gray-200 hover:bg-gray-200/5">
               <div
                 name="cardHead"
@@ -141,7 +115,7 @@ export default function Home() {
                 </p>
               </div>
               <div name="cardFooter" className="px-3 pt-4">
-                <button className="text-gray-200 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg">
+                <button className="text-gray-200 bg-orange-500 px-4 py-2 rounded-lg hover:tracking-[.1em] transition-all duration-10">
                   View
                 </button>
               </div>
@@ -170,7 +144,7 @@ export default function Home() {
                 </p>
               </div>
               <div name="cardFooter" className="px-3">
-                <button className="text-gray-200 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg ">
+                <button className="text-gray-200 bg-orange-500 px-4 py-2 rounded-lg hover:tracking-[.1em] transition-all duration-10">
                   View
                 </button>
               </div>
@@ -199,7 +173,7 @@ export default function Home() {
                 </p>
               </div>
               <div name="cardFooter" className="px-3">
-                <button className="text-gray-200 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg ">
+                <button className="text-gray-200 bg-orange-500 px-4 py-2 rounded-lg hover:tracking-[.1em] transition-all duration-10">
                   View
                 </button>
               </div>
@@ -228,88 +202,7 @@ export default function Home() {
           <div></div>
         </div>
       </main>
-      <footer className="bg-black/95">
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-          <div className="md:flex md:justify-between">
-            <div className="mb-6 md:mb-0">
-              <Link href="/" className="flex items-center">
-                <img
-                  src="/images/atlas-logo.png"
-                  className="h-32 mr-3"
-                  alt="Atlas Gym Logo"
-                />
-              </Link>
-            </div>
-            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-              <div>
-                <h2 className="mb-6 text-sm font-semibol uppercase text-white">
-                  Services
-                </h2>
-                <ul className="text-gray-400 font-medium">
-                  <li className="mb-4">
-                    <a href="#" className="hover:underline">
-                      Request Training
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:underline">
-                      Memberships
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h2 className="mb-6 text-sm font-semibold uppercase text-white">
-                  Follow us
-                </h2>
-                <ul className="text-gray-400  font-medium">
-                  <li className="mb-4">
-                    <a href="#" className="hover:underline ">
-                      Instagram
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:underline">
-                      Facebook
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
-                  Legal
-                </h2>
-                <ul className="text-gray-400  font-medium">
-                  <li className="mb-4">
-                    <a href="#" className="hover:underline">
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:underline">
-                      Terms &amp; Conditions
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <hr className="my-6 border-red-500 sm:mx-auto lg:my-8" />
-          <div className="sm:flex sm:items-center sm:justify-between">
-            <span className="text-sm text-gray-200 sm:text-center ">
-              © 2023{" "}
-              <Link href="/" className="hover:underline">
-                Atlas Gym™
-              </Link>
-              . All Rights Reserved.
-            </span>
-            <div className="text-sm flex mt-4sm:justify-center sm:mt-0 text-gray-200 flex-col">
-              <div className="text-lg font-medium">Contact</div>
-              <a href="mailto:example@example.com">management@atlasgym.com</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
