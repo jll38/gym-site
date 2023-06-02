@@ -19,10 +19,10 @@ export function Navbar({}) {
       </div>
 
       <div className="md:ml-[10%] flex gap-2 sm:gap-10 md:gap-20">
-        <button className="hover:text-gray-200"><Link href="/about">About</Link></button>
-        <button className="hover:text-gray-200"><Link href="/services">Services</Link></button>
-        <button className="hover:text-gray-200"><Link href="/atlas">Atlas Crossfit</Link></button>
-        <button className="hover:text-gray-200"><Link href="/shop">Shop</Link></button>
+        <button className="hover:text-gray-200 hover:border-b-2 hover:border-red-500 transition-all duration-50"><Link href="/about">About</Link></button>
+        <button className="hover:text-gray-200 hover:border-b-2 hover:border-red-500 transition-all duration-50"><Link href="/services">Services</Link></button>
+        <button className="hover:text-gray-200 hover:border-b-2 hover:border-red-500 transition-all duration-50"><Link href="/atlas">Atlas Crossfit</Link></button>
+        <button className="hover:text-gray-200 hover:border-b-2 hover:border-red-500 transition-all duration-50"><Link href="/shop">Shop</Link></button>
       </div>
     </nav>
   );
