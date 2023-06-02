@@ -32,8 +32,8 @@ export default function Home() {
         <Navbar />
         <div className="flex justify-center items-center mx-auto border-b border-red-500">
   <div className="h-[80vh] overflow-hidden z-0 bg-[url('/images/landing.jpeg')] bg-cover bg-no-repeat w-screen">
-    <div name="bgChild" className="flex flex-col justify-center  text-center sm:text-left sm:ml-24 w-full h-full">
-      <div className="flex justify-between sm:w-1/4 text-3xl text-gray-200 mx-24 sm:mx-0">
+    <div name="bgChild" className="relative flex flex-col justify-center  text-center sm:text-left sm:ml-24 w-full h-full bottom-10">
+      <div className="flex justify-between sm:w-1/4 text-3xl text-yellow-500 mx-24 sm:mx-0 [text-shadow:_0_4px_0_rgb(0_0_0_/_40%)]">
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
         <i className="fa-solid fa-star"></i>
@@ -69,7 +69,7 @@ export default function Home() {
                   onClick={() => {
                     window.location.assign("/shop");
                   }}
-                  className="mt-4text-gray-200 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg"
+                  className="mt-4 text-gray-200 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg"
                 >
                   Shop Merchandise
                 </button>
@@ -92,7 +92,7 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-black/95 flex flex-col">
-          <div className="h-[600px] flex justify-center gap-10 text-gray-400 flex-wrap">
+          <div className=" flex justify-center gap-10 text-gray-400 flex-wrap">
             <div className="h-[450px] min-w-[300px] max-w-[300px]w w-[300px] hover:text-gray-200 hover:bg-gray-200/5">
               <div
                 name="cardHead"
@@ -182,7 +182,7 @@ export default function Home() {
         </div>
 
         <div className="bg-black/95 flex flex-col pb-10">
-          <div className="h-[600px] flex justify-center gap-10 text-gray-400 flex-wrap">
+          <div className=" flex justify-center gap-10 text-gray-400 flex-wrap">
             <div className="grid md:grid-cols-2  gap-10 md:gap-0">
               <TrainerBox h={600} w={400} img="/images/trainers/marcus.png" />
               <div className="grid grid-cols-2">

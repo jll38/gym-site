@@ -4,7 +4,7 @@ import Image from "next/image";
 export function TrainerBox({ ...props }) {
   return (
     <button
-      className={`relative border-2 border-gray-600 w-[${
+      className={`relative border-2  border-red-500 w-[${
         props.w ? props.w : "200"
       }px] h-[${props.h ? props.h : "200"}px] overflow-hidden`}
     >
