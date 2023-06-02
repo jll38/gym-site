@@ -37,7 +37,8 @@ export default function Home() {
               name="bgChild"
               className="relative flex flex-col justify-center items-center text-center  w-full h-full bottom-10"
             >
-              <div className="flex justify-between sm:w-1/4 text-5xl text-white mx-24 sm:mx-0 [text-shadow:_0_4px_0_rgb(0_0_0_/_40%)]">
+              <div className="border-4 px-5 py-10">
+              <div className="flex justify-between text-5xl text-white mx-36 [text-shadow:_0_4px_0_rgb(0_0_0_/_40%)]">
                 <i className="fa-solid fa-star"></i>
                 <i className="fa-solid fa-star"></i>
                 <i className="fa-solid fa-star"></i>
@@ -47,6 +48,7 @@ export default function Home() {
               </h1>
               <div className="text-gray-100 text-[1.5em] sm:text-[1.2em] md:text-[2em] [text-shadow:_0_3px_3px_rgb(0_0_0_/_40%)]">
                 Memberships Plans starting from $39.99/Month!
+              </div>
               </div>
             </div>
           </div>
