@@ -20,6 +20,7 @@ export default function Home() {
       autoplay: 1,
     },
   };
+  const [localAtlas, setLocalAtlas] = useState("Newark");
   return (
     <>
       <Head>
@@ -30,24 +31,47 @@ export default function Home() {
       </Head>
       <main className="bg-black">
         <Navbar />
-        <div className="flex justify-center items-center mx-auto border-b border-red-500">
-  <div className="h-[80vh] overflow-hidden z-0 bg-[url('/images/landing.jpeg')] bg-cover bg-no-repeat w-screen">
-    <div name="bgChild" className="relative flex flex-col justify-center  text-center sm:text-left sm:ml-24 w-full h-full bottom-10">
-      <div className="flex justify-between sm:w-1/4 text-3xl text-yellow-500 mx-24 sm:mx-0 [text-shadow:_0_4px_0_rgb(0_0_0_/_40%)]">
-        <i className="fa-solid fa-star"></i>
-        <i className="fa-solid fa-star"></i>
-        <i className="fa-solid fa-star"></i>
-      </div>
-      <h1 className="text-white font-bold text-[3em] sm:text-[4em] [text-shadow:_0_6px_0_rgb(0_0_0_/_40%)] sm:w-1/2">
-        UNLOCK YOUR GREATNESS
-      </h1>
-      <div className="text-gray-300 text-[1.5em] sm:text-[1.2em] md:text-[2em] [text-shadow:_0_3px_0_rgb(0_0_0_/_40%)] md:w-3/4 lg:w-1/3">
-        Memberships Plans starting from $45 Per Month!
-      </div>
-    </div>
-  </div>
-</div>
-
+        <div className="flex justify-center items-center mx-auto">
+          <div className="h-[80vh] overflow-hidden z-0 bg-[url('/images/landing.jpeg')] bg-cover bg-no-repeat w-screen">
+            <div
+              name="bgChild"
+              className="relative flex flex-col justify-center items-center text-center  w-full h-full bottom-10"
+            >
+              <div className="flex justify-between sm:w-1/4 text-5xl text-white mx-24 sm:mx-0 [text-shadow:_0_4px_0_rgb(0_0_0_/_40%)]">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <h1 className="text-white font-bold text-[3em] sm:text-[4em] [text-shadow:_0_6px_4px_rgb(0_0_0_/_40%)]">
+                UNLOCK YOUR GREATNESS
+              </h1>
+              <div className="text-gray-100 text-[1.5em] sm:text-[1.2em] md:text-[2em] [text-shadow:_0_3px_3px_rgb(0_0_0_/_40%)]">
+                Memberships Plans starting from $39.99/Month!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-gradient-to-r from-red-500 to-orange-400">
+          <div className="py-8 flex flex-col justify-center items-center text-white">
+            <div className="text-sm uppercase tracking-[.5em]">
+              Closest Location
+            </div>
+            <div className="text-2xl pt-2 pb-4 tracking-[.1em]">
+              Your Local Atlas Club&nbsp;
+              <span>
+                <i class="fa-solid fa-location-dot"></i>&nbsp;
+                <button className="hover:tracking-[.15em] transition-all duration-300">{localAtlas}</button>&nbsp;
+                <button className="uppercase text-xs">Change</button>
+              </span>
+            </div>
+            <div className="flex justify-center">
+              <div className="flex gap-4 ">
+                <button className="w-52 h-14 bg-white uppercase text-red-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300">Get Details</button>
+                <button className="w-36 h-14 bg-white uppercase text-orange-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300">JOIN NOW</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="bg-black/95">
           <div className="flex justify-center mb-20">
             <div className=" h-[425px] py-24 flex sm:flex-row flex-col gap-[2rem] md:gap-[4rem] lg:gap-[20rem] text-gray-200">
