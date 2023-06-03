@@ -7,7 +7,7 @@ export function Navbar({}) {
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.getElementById('nav');
-      if (window.scrollY > 10) {
+      if (window.scrollY > 1) {
         navbar.classList.add('bg-black');
       } else {
         navbar.classList.remove('bg-black');
@@ -24,9 +24,9 @@ export function Navbar({}) {
   return (
     <nav
       id="nav"
-      className="hidden fixed sm:flex justify-start px-10 text-gray-300 gap-5 z-50 w-screen transition-all duration-300"
+      className="hidden fixed sm:flex justify-between px-10 text-gray-300 gap-5 z-50 w-screen transition-all duration-300"
     >
-      <div className="ml-6 sm:ml-[16%] h-16 w-36 relative">
+      <div className="h-16 w-36 relative">
         <Link href="/">
           <Image
             className="object-contain"

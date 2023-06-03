@@ -6,6 +6,10 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/aspect-ratio')],
+  plugins: [require('@tailwindcss/aspect-ratio'),
+  function ({ addVariant }) {
+    addVariant('child', '& > *');
+    addVariant('child-hover', '& > *:hover');
+}],
 }
 

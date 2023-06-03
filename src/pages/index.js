@@ -13,7 +13,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [currTrainer, setcurrTrainer] = useState("Marcus");
-
   const videoOpts = {
     height: "390",
     width: "640",
@@ -33,23 +32,31 @@ export default function Home() {
       <main className="bg-black">
         <Navbar />
         <div className="flex justify-center items-center mx-auto">
-          <div className="h-[80vh] overflow-hidden z-0 bg-[url('/images/mecca.jpeg')] bg-cover bg-no-repeat w-screen">
+          <div className="h-[85vh] overflow-hidden z-0 bg-[url('/images/landing.png')] bg-cover bg-no-repeat w-screen">
             <div
               name="bgChild"
-              className="relative flex flex-col justify-center items-center text-center  w-full h-full bottom-10"
+              className="relative flex flex-col justify-center items-center sm:items-end text-left  w-full h-full pr-12"
             >
-              <div className="border-4 px-5 py-10">
-                <div className="flex justify-between text-5xl text-white mx-36 [text-shadow:_0_4px_0_rgb(0_0_0_/_40%)]">
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                  <i className="fa-solid fa-star"></i>
-                </div>
-                <h1 className="text-white font-bold text-[3em] sm:text-[4em] [text-shadow:_0_6px_4px_rgb(0_0_0_/_40%)]">
+              <div className="w-full sm:w-1/3 mx-5 px-5 py-10 leading-10">
+                <h1 className="text-white font-bold text-[1em] [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)]">
                   UNLOCK YOUR GREATNESS
                 </h1>
-                <div className="text-gray-100 text-[1.5em] sm:text-[1.2em] md:text-[2em] [text-shadow:_0_3px_3px_rgb(0_0_0_/_40%)]">
-                  Memberships Plans starting from $39.99/Month!
+                <div className="text-gray-100 font-bold text-[1.5em] sm:text-[2em] md:text-[3em] [text-shadow:_0_3px_3px_rgb(0_0_0_/_40%)]">
+                  FORGE THE BODY
                 </div>
+                <div className="text-gray-100 text-[1.5em] sm:text-[1.2em] md:text-[3em] [text-shadow:_0_3px_3px_rgb(0_0_0_/_40%)] font-light">
+                  YOU WANT
+                </div>
+                <button
+                  id="hero-cta"
+                  className="bg-white my-4 py-3 px-6 text-sm uppercase font-bold"
+                  onMouseEnter={() => {document.getElementById("hero-cta-button-arrow").classList.add("left-2")}}
+                  onMouseLeave={() => {document.getElementById("hero-cta-button-arrow").classList.remove("left-2")}}
+                  onClick={() => {window.location.assign('/memberships')}}
+                >
+                  Membership Plans{"  "}
+                  <i id="hero-cta-button-arrow" className="relative fa-solid fa-arrow-right text-red-500 left-0 transition-all duration-200"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -115,9 +122,7 @@ export default function Home() {
                 </p>
               </div>
               <div name="cardFooter" className="px-3 pt-4">
-                <button className="text-gray-200 bg-orange-500 px-4 py-2 rounded-lg hover:tracking-[.1em] transition-all duration-10">
-                  View
-                </button>
+
               </div>
             </div>
 
@@ -144,9 +149,7 @@ export default function Home() {
                 </p>
               </div>
               <div name="cardFooter" className="px-3">
-                <button className="text-gray-200 bg-orange-500 px-4 py-2 rounded-lg hover:tracking-[.1em] transition-all duration-10">
-                  View
-                </button>
+
               </div>
             </div>
 
@@ -173,9 +176,7 @@ export default function Home() {
                 </p>
               </div>
               <div name="cardFooter" className="px-3">
-                <button className="text-gray-200 bg-orange-500 px-4 py-2 rounded-lg hover:tracking-[.1em] transition-all duration-10">
-                  View
-                </button>
+
               </div>
             </div>
           </div>
