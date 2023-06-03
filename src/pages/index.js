@@ -37,19 +37,19 @@ export default function Home() {
               name="bgChild"
               className="relative flex flex-col justify-center items-center sm:items-end text-left  w-full h-full pr-12"
             >
-              <div className="w-full sm:w-1/3 mx-5 px-5 py-10 leading-10">
+              <div className="w-full  md:w-2/5 mx-5 px-10 sm:px-5 py-10 leading-[3em] transition-all duration-300">
                 <h1 className="text-white font-bold text-[1em] [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)]">
                   UNLOCK YOUR GREATNESS
                 </h1>
-                <div className="text-gray-100 font-bold text-[1.5em] sm:text-[2em] md:text-[3em] [text-shadow:_0_3px_3px_rgb(0_0_0_/_40%)]">
+                <div className="text-gray-100 font-bold text-[4em] [text-shadow:_0_3px_3px_rgb(0_0_0_/_40%)]">
                   FORGE THE BODY
                 </div>
-                <div className="text-gray-100 text-[1.5em] sm:text-[1.2em] md:text-[3em] [text-shadow:_0_3px_3px_rgb(0_0_0_/_40%)] font-light">
+                <div className="text-gray-100 text-[4em] [text-shadow:_0_3px_3px_rgb(0_0_0_/_40%)] font-light">
                   YOU WANT
                 </div>
                 <button
                   id="hero-cta"
-                  className="bg-white my-4 py-3 px-6 text-sm uppercase font-bold"
+                  className="bg-white my-4 py-3 px-6 text-sm uppercase font-bold border border-white hover:border-red-500 transition-all duration-300"
                   onMouseEnter={() => {document.getElementById("hero-cta-button-arrow").classList.add("left-2")}}
                   onMouseLeave={() => {document.getElementById("hero-cta-button-arrow").classList.remove("left-2")}}
                   onClick={() => {window.location.assign('/memberships')}}
