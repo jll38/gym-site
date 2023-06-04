@@ -8,21 +8,11 @@ import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Link from "next/link";
-import YouTube from "react-youtube";
-import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [currTrainer, setcurrTrainer] = useState("Marcus");
-  const videoOpts = {
-    height: "390",
-    width: "640",
-    playerVars: {
-      autoplay: 1,
-    },
-  };
+
   const [localAtlas, setLocalAtlas] = useState("Newark");
   return (
     <>
@@ -349,8 +339,8 @@ export default function Home() {
           </div>
           <div className="flex justify-center">
             <div className="flex justify-center gap-10 flex-wrap">
-              <PriceCard title={"Newcomer"} price="29.99" features={""} thumbnail="/images/pricing/pricing-1.jpeg" />
-              <PriceCard title={"Experienced"} price="49.99" features={""} thumbnail="/images/pricing/pricing-2.jpg" />
+              <PriceCard title={"Newcomer"} price="29.99" features={""} thumbnail="/images/pricing/pricing-2.jpg" />
+              <PriceCard title={"Experienced"} price="49.99" features={""} thumbnail="/images/pricing/pricing-1.jpeg" />
               <PriceCard title={"Mr. Olympia"} price="59.99" features={""} thumbnail="/images/pricing/pricing-3.jpeg" />
             </div>
           </div>
