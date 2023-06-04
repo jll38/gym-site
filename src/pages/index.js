@@ -1,3 +1,5 @@
+import { Trainer } from "./../components/trainer";
+
 import { Footer } from "./../components/footer";
 import { TrainerBox } from "./../components/trainer-box";
 import { Navbar } from "./../components/Navbar";
@@ -192,7 +194,7 @@ export default function Home() {
         </div>
 
         <div className="bg-white flex flex-col">
-          <div className="bg-[url('/images/18410.jpg')] bg-cover h-max bg-opacity-10 py-16">
+          <div className="bg-[url('/images/18410.jpg')] bg-cover h-max bg-opacity-10 py-8">
             <div className="text-black  text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold">
               <span>
                 <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
@@ -208,76 +210,22 @@ export default function Home() {
                 goals with personal guidance and motivation!
               </div>
             </div>
-            <div className=" flex justify-center gap-10 text-gray-black flex-wrap mt-24">
-              <div className="w-[300px] h-[400px] flex flex-col items-center justify-end">
-                <div className="h-[300px] w-[300px] relative">
-                  <Image
-                    className="object-contain drop-shadow-2xl shadow-red-500 z-40 absolute grayscale"
-                    alt="Trainer Adam"
-                    src="/images/trainers/adam-doe-transparent.png"
-                    layout="fill"
-                    id="adam-img"
-                  />
-                  <div
-                    className="absolute h-[100%] w-[50%] left-[24%] cursor-pointer"
-                    onMouseEnter={() => {
-                      document
-                        .getElementById("adam-img")
-                        .classList.add("grayscale-0");
-                    }}
-                    onMouseLeave={() => {
-                      document
-                        .getElementById("adam-img")
-                        .classList.remove("grayscale-0");
-                    }}
-                    onClick={() => {}}
-                  />
-                  <Image
-                    className="object-fit  shadow-red-500 z-10 bottom-0 absolute"
-                    alt="Trainer Adam"
-                    src="/images/PngItem_310219.png"
-                    layout="fill"
-                  />
-                </div>
-                <button
-                  className="border h-[100px] w-full bg-white rounded-md align-bottom shadow-md py-4 text-center"
-                  onMouseEnter={() => {
-                    document
-                      .getElementById("adam-box-red-bar")
-                      .classList.add("w-full");
-                      document
-                      .getElementById("adam-box-red-bar")
-                      .classList.remove("w-1/4");
-                  }}
-                  onMouseLeave={() => {
-                    document
-                      .getElementById("adam-box-red-bar")
-                      .classList.add("w-1/4");
-                      document
-                      .getElementById("adam-box-red-bar")
-                      .classList.remove("w-full");
-                  }}
-                >
-                  <div className="font-semibold text-xl tracking-[.06em]">
-                    Adam Doe
-                  </div>
-                  <div className="font-medium text-gray-600">
-                    Bodybuilding Trainer
-                  </div>
-                  <div className="font-medium text-gray-600 flex justify-center gap-5 mt-1">
-                    <i className="fa-brands fa-solid fa-instagram"></i>
-                    <i className="fa-brands fa-solid fa-facebook"></i>
-                    <i className="fa-brands fa-solid fa-twitter"></i>
-                    <i className="fa-solid fa-envelope"></i>
-                  </div>
-                  <div className="flex justify-center items-end relative bottom-0 h-3">
-                    <div
-                      id="adam-box-red-bar"
-                      className="h-[4px] w-1/4 bg-red-500 relative bottom-0 transition-all duration-500"
-                    ></div>
-                  </div>
-                </button>
-              </div>
+            <div className="flex flex-wrap justify-center gap-24 ">
+              <Trainer
+                name="Adam Doe"
+                img="/images/trainers/adam-doe-transparent.png"
+                trainerType={"Crossfit"}
+              />
+              <Trainer
+                name="The Arnold"
+                img="/images/trainers/arnold-transparent.png"
+                trainerType={"Bodybuilding"}
+              />
+              <Trainer
+                name="Marie D. Thomas"
+                img="/images/trainers/marie-thomas-transparent-2.png"
+                trainerType={"Lifestyle"}
+              />
             </div>
 
             <div></div>
