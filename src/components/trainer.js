@@ -11,7 +11,7 @@ export function Trainer({ name, img, trainerType }) {
             className="object-contain drop-shadow-2xl shadow-red-500 z-40 absolute grayscale"
             alt={`Trainer ${name}`}
             src={img}
-            layout="fill"
+            fill
             id={`${nameID}-img`}
           />
           <div
@@ -30,7 +30,7 @@ export function Trainer({ name, img, trainerType }) {
             className="object-fit  shadow-red-500 z-10 bottom-0 absolute"
             alt="Trainer Backdrop"
             src="/images/PngItem_310219.png"
-            layout="fill"
+            fill
           />
         </div>
         <button

@@ -31,6 +31,7 @@ export function Navbar({}) {
           <Image
             className="object-contain"
             src="/images/atlas-logo.png"
+            alt="Atlas Gym Logo"
             fill
           />
         </Link>
