@@ -63,7 +63,7 @@ export default function Home() {
                       .classList.remove("left-2");
                   }}
                   onClick={() => {
-                    window.location.assign("/memberships");
+                    window.location.assign("/pricing");
                   }}
                 >
                   Membership Plans{"  "}
@@ -231,7 +231,7 @@ export default function Home() {
             <div></div>
           </div>
         </div>
-        <div className="bg-white flex flex-col py-8 items-center">
+        <div className="bg-white flex flex-col py-8 items-center border-b-2">
           <div className="text-black  text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold">
             <span>
               <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
@@ -242,7 +242,7 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="flex max-w-[1000px] mx-10">
+          <div className="flex max-w-[1000px] mx-10 my-16">
             <div className="h-[425px] w-[250px]  rounded-tr-[6.7em] relative overflow-hidden hidden md:block">
               <Image
                 className="object-cover z-10 "
@@ -269,36 +269,84 @@ export default function Home() {
                 </div>
                 <div className="flex justify-between h-[100px]">
                   <div>
-                    <div className="font-semibold text-md sm:text-2xl">Matthew M. Walsh</div>
+                    <div className="font-semibold text-md sm:text-2xl">
+                      Matthew M. Walsh
+                    </div>
                     <div className="text-sm sm:text-md">Fitness Influencer</div>
                   </div>
                   <div className="flex flex-col h-[px] justify-end">
                     <div className="flex gap-4">
-                    <button
-                      id="testimonial-left-btn"
-                      className="bg-white my-4 py-3 px-6 text-sm uppercase font-bold text-black hover:bg-red-500 hover:text-white transition-all duration-300"
-                    >
-                      <i
-                        id="testimonial-left-arrow"
-                        className="relative fa-solid fa-arrow-left"
-                      ></i>
-                    </button>
-                    <button
-                      id="testimonial-right-btn"
-                      className="bg-white my-4 sm:py-3 px-6 text-sm uppercase font-bold text-black hover:bg-red-500 hover:text-white transition-all duration-300"
-                    >
-                      <i
-                        id="testimonial-right-arrow"
-                        className="relative fa-solid fa-arrow-right"
-                      ></i>
-                    </button>
+                      <button
+                        id="testimonial-left-btn"
+                        className="bg-white my-4 py-3 px-6 text-sm uppercase font-bold text-black hover:bg-red-500 hover:text-white transition-all duration-300"
+                      >
+                        <i
+                          id="testimonial-left-arrow"
+                          className="relative fa-solid fa-arrow-left"
+                        ></i>
+                      </button>
+                      <button
+                        id="testimonial-right-btn"
+                        className="bg-white my-4 sm:py-3 px-6 text-sm uppercase font-bold text-black hover:bg-red-500 hover:text-white transition-all duration-300"
+                      >
+                        <i
+                          id="testimonial-right-arrow"
+                          className="relative fa-solid fa-arrow-right"
+                        ></i>
+                      </button>
                     </div>
-                    
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div className="text-black  text-center text-xl mt-10 mb-10 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold underline">
+            Brands We Work With
+          </div>
+          <div className="flex justify-center w-screen pb-4">
+            <div className="flex justify-evenly w-[1080px] flex-wrap gap-10 child:opacity-60 child-hover:opacity-100">
+              <div className="w-[200px] h-[100px] relative">
+                <Image
+                  className="object-scale-down"
+                  src="/images/brands/gymshark.png"
+                  fill
+                ></Image>
+              </div>
+              <div className="w-[200px] h-[100px] relative">
+                <Image
+                  className="object-scale-down"
+                  src="/images/brands/ryse.png"
+                  fill
+                ></Image>
+              </div>
+              <div className="w-[200px] h-[100px] relative">
+                <Image
+                  className="object-scale-down"
+                  src="/images/brands/bodybuilding-com.png"
+                  fill
+                ></Image>
+              </div>
+              <div className="w-[200px] h-[100px] relative  ">
+                <Image
+                  className="object-scale-down"
+                  src="/images/brands/news.png"
+                  fill
+                ></Image>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-white flex flex-col py-8 items-center border-b-2">
+          <div className="text-black  text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold">
+            <span>
+              <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
+            </span>
+            Pricing
+            <span>
+              <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
+            </span>
+          </div>
+          <div></div>
         </div>
       </main>
       <Footer />
