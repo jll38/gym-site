@@ -1,3 +1,4 @@
+import { PriceCard } from './../components/priceCard';
 import { Trainer } from "./../components/trainer";
 
 import { Footer } from "./../components/footer";
@@ -346,7 +347,13 @@ export default function Home() {
               <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
             </span>
           </div>
-          <div></div>
+          <div className="flex justify-center">
+            <div className="flex justify-center gap-10 flex-wrap">
+              <PriceCard title={"Novice"} price="29.99" features={""} thumbnail="/images/pricing/pricing-1.jpeg" />
+              <PriceCard title={"Experienced"} price="49.99" features={""} thumbnail="/images/pricing/pricing-2.jpg" />
+              <PriceCard title={"Mr. Olympia"} price="59.99" features={""} thumbnail="/images/pricing/pricing-3.jpeg" />
+            </div>
+          </div>
         </div>
       </main>
       <Footer />
