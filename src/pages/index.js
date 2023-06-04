@@ -50,12 +50,25 @@ export default function Home() {
                 <button
                   id="hero-cta"
                   className="bg-white my-4 py-3 px-6 text-sm uppercase font-bold border border-white hover:border-red-500 transition-all duration-300"
-                  onMouseEnter={() => {document.getElementById("hero-cta-button-arrow").classList.add("left-2")}}
-                  onMouseLeave={() => {document.getElementById("hero-cta-button-arrow").classList.remove("left-2")}}
-                  onClick={() => {window.location.assign('/memberships')}}
+                  onMouseEnter={() => {
+                    document
+                      .getElementById("hero-cta-button-arrow")
+                      .classList.add("left-2");
+                  }}
+                  onMouseLeave={() => {
+                    document
+                      .getElementById("hero-cta-button-arrow")
+                      .classList.remove("left-2");
+                  }}
+                  onClick={() => {
+                    window.location.assign("/memberships");
+                  }}
                 >
                   Membership Plans{"  "}
-                  <i id="hero-cta-button-arrow" className="relative fa-solid fa-arrow-right text-red-500 left-0 transition-all duration-200"></i>
+                  <i
+                    id="hero-cta-button-arrow"
+                    className="relative fa-solid fa-arrow-right text-red-500 left-0 transition-all duration-200"
+                  ></i>
                 </button>
               </div>
             </div>
@@ -63,10 +76,10 @@ export default function Home() {
         </div>
         <div className="bg-gradient-to-r from-red-500 to-orange-400">
           <div className="py-8 flex flex-col justify-center items-center text-white">
-            <div className="text-sm uppercase tracking-[.5em]">
+            <div className="text-sm uppercase tracking-[.5em] font-medium">
               Closest Location
             </div>
-            <div className="text-lg sm:text-2xl pt-2 pb-4 tracking-[.1em]">
+            <div className="text-lg sm:text-2xl pt-2 pb-4 tracking-[.1em] font-semibold">
               Your Local Atlas Gym&nbsp;
               <span>
                 <i class="fa-solid fa-location-dot"></i>&nbsp;
@@ -78,7 +91,7 @@ export default function Home() {
               </span>
             </div>
             <div className="flex justify-center">
-              <div className="flex gap-4 ">
+              <div className="flex gap-4 font-medium">
                 <button className="w-52 h-14 bg-white uppercase text-red-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300">
                   Get Details
                 </button>
@@ -90,7 +103,7 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-black/95 flex flex-col mt-2">
-          <div className="text-white text-center text-2xl my-10 tracking-[.1em] uppercase flex justify-center items-center gap-2">
+          <div className="text-white text-center text-2xl my-10 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold">
             <span>
               <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
             </span>
@@ -106,14 +119,16 @@ export default function Home() {
                 className="h-1/3 flex flex-col justify-center items-center"
               >
                 <i class="fa-solid fa-dumbbell text-6xl pb-4  "></i>
-                <h3 className="text-[1.5em]">Personalized Training</h3>
+                <h3 className="text-[1.5em] font-semibold">
+                  Personalized Training
+                </h3>
                 <div className="h-1 w-1/2 bg-gray-400 mt-2"></div>
               </div>
               <div
                 name="cardBody"
                 className="flex flex-col justify-center items-center"
               >
-                <p className="break-words w-[275px]">
+                <p className="break-words w-[275px] font-medium">
                   Atlas Gym is proud to offer personalized training services
                   designed to propel you towards your unique fitness goals. Our
                   team of professional trainers utilizes cutting-edge technology
@@ -121,9 +136,7 @@ export default function Home() {
                   tailored specifically to you.
                 </p>
               </div>
-              <div name="cardFooter" className="px-3 pt-4">
-
-              </div>
+              <div name="cardFooter" className="px-3 pt-4"></div>
             </div>
 
             <div className="h-[450px] min-w-[300px] max-w-[300px]w w-[300px] hover:text-gray-200 hover:bg-gray-200/5">
@@ -132,14 +145,14 @@ export default function Home() {
                 className="h-1/3 flex flex-col justify-center items-center"
               >
                 <i class="fa-solid fa-martini-glass-empty text-6xl pb-4"></i>
-                <h3 className="text-[1.5em]">Juice Bar</h3>
+                <h3 className="text-[1.5em] font-semibold">Juice Bar</h3>
                 <div className="h-1 w-1/2 bg-gray-400 mt-2"></div>
               </div>
               <div
                 name="cardBody"
                 className="flex flex-col justify-center items-center"
               >
-                <p className="break-words w-[275px]">
+                <p className="break-words w-[275px] font-medium">
                   Energize your body and mind at the Atlas Gym Juice Bar.
                   Discover our wide variety of fresh smoothies, specifically
                   designed to aid in recovery, fuel your workout, or simply to
@@ -148,9 +161,7 @@ export default function Home() {
                   vegetables, and whey protein.
                 </p>
               </div>
-              <div name="cardFooter" className="px-3">
-
-              </div>
+              <div name="cardFooter" className="px-3"></div>
             </div>
 
             <div className="h-[450px] min-w-[300px] max-w-[300px]w w-[300px] hover:text-gray-200 hover:bg-gray-200/5">
@@ -159,14 +170,14 @@ export default function Home() {
                 className="h-1/3 flex flex-col justify-center items-center"
               >
                 <i class="fa-solid fa-temperature-arrow-up text-6xl pb-4"></i>
-                <h3 className="text-[1.5em]">Sauna & Spa</h3>
+                <h3 className="text-[1.5em] font-semibold">Sauna & Spa</h3>
                 <div className="h-1 w-1/2 bg-gray-400 mt-2"></div>
               </div>
               <div
                 name="cardBody"
                 className="flex flex-col justify-center items-center"
               >
-                <p className="break-words w-[275px]">
+                <p className="break-words w-[275px] font-medium">
                   Energize your body and mind at the Atlas Gym Juice Bar.
                   Discover our wide variety of fresh smoothies, specifically
                   designed to aid in recovery, fuel your workout, or simply to
@@ -175,32 +186,102 @@ export default function Home() {
                   vegetables, and whey protein.
                 </p>
               </div>
-              <div name="cardFooter" className="px-3">
-
-              </div>
+              <div name="cardFooter" className="px-3"></div>
             </div>
           </div>
         </div>
 
-        <div className="bg-black/95 flex flex-col pb-10">
-          <div className=" flex justify-center gap-10 text-gray-400 flex-wrap">
-            <div className="grid md:grid-cols-2  gap-10 md:gap-0">
-              <TrainerBox h={600} w={400} img="/images/trainers/marcus.png" />
-              <div className="grid grid-cols-2">
-                <TrainerBox
-                  name="Marcus"
-                  selected
-                  img="/images/trainers/marcus.png"
-                />
-                <TrainerBox name="Fred" img="/images/trainers/fred.jpeg" />
-                <TrainerBox name="Alyssa" img="/images/trainers/alyssa.jpg" />
-                <TrainerBox name="John" img="/images/trainers/fred.jpeg" />
-                <TrainerBox name="Jane" img="/images/trainers/fred.jpeg" />
-                <TrainerBox name="Nick" img="/images/trainers/nick.png" />
+        <div className="bg-white flex flex-col">
+          <div className="bg-[url('/images/18410.jpg')] bg-cover h-max bg-opacity-10 py-16">
+            <div className="text-black  text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold">
+              <span>
+                <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
+              </span>
+              Professional Trainers
+              <span>
+                <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
+              </span>
+            </div>
+            <div className="flex justify-center">
+              <div className="max-w-[400px] text-center text-gray-700 font-medium">
+                Our team of expert coaches is dedicated to help you acheive your
+                goals with personal guidance and motivation!
               </div>
             </div>
+            <div className=" flex justify-center gap-10 text-gray-black flex-wrap mt-24">
+              <div className="w-[300px] h-[400px] flex flex-col items-center justify-end">
+                <div className="h-[300px] w-[300px] relative">
+                  <Image
+                    className="object-contain drop-shadow-2xl shadow-red-500 z-40 absolute grayscale"
+                    alt="Trainer Adam"
+                    src="/images/trainers/adam-doe-transparent.png"
+                    layout="fill"
+                    id="adam-img"
+                  />
+                  <div
+                    className="absolute h-[100%] w-[50%] left-[24%] cursor-pointer"
+                    onMouseEnter={() => {
+                      document
+                        .getElementById("adam-img")
+                        .classList.add("grayscale-0");
+                    }}
+                    onMouseLeave={() => {
+                      document
+                        .getElementById("adam-img")
+                        .classList.remove("grayscale-0");
+                    }}
+                    onClick={() => {}}
+                  />
+                  <Image
+                    className="object-fit  shadow-red-500 z-10 bottom-0 absolute"
+                    alt="Trainer Adam"
+                    src="/images/PngItem_310219.png"
+                    layout="fill"
+                  />
+                </div>
+                <button
+                  className="border h-[100px] w-full bg-white rounded-md align-bottom shadow-md py-4 text-center"
+                  onMouseEnter={() => {
+                    document
+                      .getElementById("adam-box-red-bar")
+                      .classList.add("w-full");
+                      document
+                      .getElementById("adam-box-red-bar")
+                      .classList.remove("w-1/4");
+                  }}
+                  onMouseLeave={() => {
+                    document
+                      .getElementById("adam-box-red-bar")
+                      .classList.add("w-1/4");
+                      document
+                      .getElementById("adam-box-red-bar")
+                      .classList.remove("w-full");
+                  }}
+                >
+                  <div className="font-semibold text-xl tracking-[.06em]">
+                    Adam Doe
+                  </div>
+                  <div className="font-medium text-gray-600">
+                    Bodybuilding Trainer
+                  </div>
+                  <div className="font-medium text-gray-600 flex justify-center gap-5 mt-1">
+                    <i className="fa-brands fa-solid fa-instagram"></i>
+                    <i className="fa-brands fa-solid fa-facebook"></i>
+                    <i className="fa-brands fa-solid fa-twitter"></i>
+                    <i className="fa-solid fa-envelope"></i>
+                  </div>
+                  <div className="flex justify-center items-end relative bottom-0 h-3">
+                    <div
+                      id="adam-box-red-bar"
+                      className="h-[4px] w-1/4 bg-red-500 relative bottom-0 transition-all duration-500"
+                    ></div>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <div></div>
           </div>
-          <div></div>
         </div>
       </main>
       <Footer />
