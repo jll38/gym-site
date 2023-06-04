@@ -349,7 +349,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center">
             <div className="flex justify-center gap-10 flex-wrap">
-              <PriceCard title={"Novice"} price="29.99" features={""} thumbnail="/images/pricing/pricing-1.jpeg" />
+              <PriceCard title={"Newcomer"} price="29.99" features={""} thumbnail="/images/pricing/pricing-1.jpeg" />
               <PriceCard title={"Experienced"} price="49.99" features={""} thumbnail="/images/pricing/pricing-2.jpg" />
               <PriceCard title={"Mr. Olympia"} price="59.99" features={""} thumbnail="/images/pricing/pricing-3.jpeg" />
             </div>

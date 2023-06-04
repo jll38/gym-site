@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-export function PriceCard({title, price, features, thumbnail}) {
+export function PriceCard({ title, price, features, thumbnail }) {
   return (
     <div
       id="price-card-1"
@@ -9,17 +9,40 @@ export function PriceCard({title, price, features, thumbnail}) {
       <div
         id="price-card-1-head"
         className="h-[200px] rounded-bl-[5rem] rounded-br-[5rem] overflow-hidden relative border-b-2 border-red-500"
+        onMouseEnter={() => {
+          document
+            .getElementById((title.toLowerCase() + "-img").toLowerCase())
+            .classList.remove("grayscale")
+            document
+            .getElementById((title.toLowerCase() + "-title").toLowerCase())
+            .classList.add("text-red-500")}
+            
+        }
+        onMouseLeave={() =>{
+          document
+            .getElementById((title.toLowerCase() + "-img").toLowerCase())
+            .classList.add("grayscale")
+            document
+            .getElementById((title.toLowerCase() + "-title").toLowerCase())
+            .classList.remove("text-red-500")
+          }
+            
+            
+        }
       >
         <Image
           src={thumbnail}
-          className="object-none "
+          id={title.toLowerCase() + "-img"}
+          alt={title + " tier membership thumbnail"}
+          className="object-none grayscale transition-all duration-400"
           width={600}
           height={300}
         ></Image>
       </div>
       <div id="price-card-1-body" className="text-center h-[250px]">
         <div className="mx-auto relative bg-white -top-8 w-[250px] text-gray-600">
-          <div className="text-[2em]  font-semibold tracking-[.05em] ">
+          <div className="text-[1.7em] font-semibold tracking-[.05em] transition-all duration-400"
+          id={title.toLowerCase() + "-title"}>
             {title}
           </div>
           <div className="flex justify-center relative left-2">
