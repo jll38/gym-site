@@ -24,7 +24,7 @@ export function Navbar({}) {
   return (
     <nav
       id="nav"
-      className="hidden fixed sm:flex justify-between px-10 text-gray-300 gap-5 z-50 w-screen transition-all duration-300"
+      className="hidden fixed sm:flex justify-between px-10 text-gray-300 gap-5 z-50 w-screen transition-colors duration-300"
     >
       <div className="h-16 w-36 relative">
         <Link href="/">
