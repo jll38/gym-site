@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 export function Trainer({ name, img, trainerType }) {
   const nameID = name.substring(0, name.indexOf(" ")).toLowerCase();
-  console.log(nameID);
   return (
     <div className=" flex justify-center gap-10 text-gray-black flex-wrap mt-24">
       <div className="w-[300px] h-[400px] flex flex-col items-center justify-end">

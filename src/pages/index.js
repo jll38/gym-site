@@ -1,8 +1,6 @@
-import { PriceCard } from './../components/priceCard';
+import { PriceCard } from "./../components/priceCard";
 import { Trainer } from "./../components/trainer";
-
 import { Footer } from "./../components/footer";
-import { TrainerBox } from "./../components/trainer-box";
 import { Navbar } from "./../components/Navbar";
 import { useState } from "react";
 import Head from "next/head";
@@ -12,7 +10,6 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-
   const [localAtlas, setLocalAtlas] = useState("Newark");
   return (
     <>
@@ -339,9 +336,24 @@ export default function Home() {
           </div>
           <div className="flex justify-center">
             <div className="flex justify-center gap-10 flex-wrap">
-              <PriceCard title={"Newcomer"} price="29.99" features={""} thumbnail="/images/pricing/pricing-2.jpg" />
-              <PriceCard title={"Experienced"} price="49.99" features={""} thumbnail="/images/pricing/pricing-1.jpeg" />
-              <PriceCard title={"Mr. Olympia"} price="59.99" features={""} thumbnail="/images/pricing/pricing-3.jpeg" />
+              <PriceCard
+                title={"Newcomer"}
+                price="29.99"
+                features={""}
+                thumbnail="/images/pricing/pricing-2.jpg"
+              />
+              <PriceCard
+                title={"Experienced"}
+                price="49.99"
+                features={""}
+                thumbnail="/images/pricing/pricing-1.jpeg"
+              />
+              <PriceCard
+                title={"Mr. Olympia"}
+                price="59.99"
+                features={""}
+                thumbnail="/images/pricing/pricing-3.jpeg"
+              />
             </div>
           </div>
         </div>

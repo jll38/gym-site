@@ -1,8 +1,5 @@
 import { PriceCard } from "./../components/priceCard";
-import { Trainer } from "./../components/trainer";
-
 import { Footer } from "./../components/footer";
-import { TrainerBox } from "./../components/trainer-box";
 import { Navbar } from "./../components/Navbar";
 import { useState } from "react";
 import Head from "next/head";
@@ -12,7 +9,6 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Pricing() {
-  const [localAtlas, setLocalAtlas] = useState("Newark");
   return (
     <>
       <Head>
@@ -30,7 +26,7 @@ export default function Pricing() {
           <Image src="/images/sub-page-1.jpg" className="object-cover" fill />
         </div>
 
-        
+
         <div className="bg-white flex flex-col py-8 items-center border-b-2">
           <div className="text-black  text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold">
             <span>

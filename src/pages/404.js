@@ -1,8 +1,4 @@
-import { PriceCard } from "./../components/priceCard";
-import { Trainer } from "./../components/trainer";
-
 import { Footer } from "./../components/footer";
-import { TrainerBox } from "./../components/trainer-box";
 import { Navbar } from "./../components/Navbar";
 import { useState } from "react";
 import Head from "next/head";
@@ -12,7 +8,6 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Pricing() {
-  const [localAtlas, setLocalAtlas] = useState("Newark");
   return (
     <>
       <Head>
@@ -28,7 +23,7 @@ export default function Pricing() {
         <Navbar solid/>
         <div className="flex flex-col items-center">
           <div className="bg-white flex flex-col py-8 items-center ">
-            <div className="text-black  text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold pt-10">
+            <div className="text-black  text-center text-4xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold pt-10">
               <span>
                 <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
               </span>
@@ -37,7 +32,7 @@ export default function Pricing() {
                 <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
               </span>
             </div>
-            <div className="text-center font-medium text-gray-600 text-[1em]">
+            <div className="text-center font-medium text-gray-600 text-[1.1em]">
               The page you&apos;re looking for skipped leg day. <br/>
             </div>
           </div>
