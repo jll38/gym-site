@@ -7,12 +7,12 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
-
+const title = "Pricing";
 export default function Pricing() {
   return (
     <>
       <Head>
-        <title>Pricing</title>
+        <title>{title}</title>
         <meta
           name="description"
           content="Various pricing options available with being a Member of Atlas Gym. Whether you're new to the gym or an experienced lifter we have a plan that fits your needs."
@@ -22,21 +22,21 @@ export default function Pricing() {
       </Head>
       <main className="bg-black">
         <Navbar />
-        <div className="h-[400px] w-full bg-black relative ">
+        <div className="h-[400px] w-full bg-black relative flex justify-center items-end">
           <Image src="/images/sub-page-1.jpg" className="object-cover" fill />
-        </div>
-
-
-        <div className="bg-white flex flex-col py-8 items-center border-b-2">
-          <div className="text-black  text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold">
+          <div className="w-full h-full z-10 absolute bg-black/50"></div>
+          <div className="text-black  text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold z-30 text-white">
             <span>
               <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
             </span>
-            Pricing
+            {title}
             <span>
               <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
             </span>
           </div>
+        </div>
+
+        <div className="bg-white flex flex-col py-8 items-center border-b-2">
           <div className="flex justify-center">
             <div className="flex justify-center gap-10 flex-wrap">
               <PriceCard
