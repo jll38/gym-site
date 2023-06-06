@@ -38,7 +38,7 @@ export default function Pricing() {
 
         <div className="bg-[url('/images/18410.webp')] bg-cover flex flex-col py-8 items-center border-b-2">
           <div className="flex justify-center w-full">
-            <div className="w-[400px] text-sm sm:text-lg sm:w-[700px] md:w-[1000px] mx-[2rem] sm:mx-[6rem] text-gray-700 child:mb-2 border-4 border-black px-[4rem] py-[2rem]">
+            <div className="w-[400px] text-xs sm:text-sm sm:text-lg sm:w-[700px] md:w-[1000px] mx-[2rem] sm:mx-[6rem] text-gray-700 child:mb-2 border-4 border-black px-[1rem] sm:px-[4rem] py-[2rem]">
               <h2 className="text-4xl text-black font-semibold text-center">Our Story</h2>
               <div className="indent-[2rem] font-medium">
                 At Atlas Gym, we&apos;re more than just a fitness center;

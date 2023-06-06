@@ -26,7 +26,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-black">
+      <main className="bg-black w-screen">
         <Navbar />
         <div className="flex justify-center items-center mx-auto">
           <div className="h-[85vh] overflow-hidden z-0 bg-[url('/images/landing.webp')] bg-cover bg-no-repeat w-screen">
@@ -35,9 +35,18 @@ export default function Home() {
               className="relative flex flex-col justify-center items-center sm:items-end text-left  w-full h-full pr-12"
             >
               <div className="w-full  md:w-2/5 mx-5 px-10 sm:px-5 py-10 leading-[3em] transition-all duration-300">
-                <h1 className="text-white font-bold text-[1em] [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)]">
-                  UNLOCK YOUR GREATNESS
-                </h1>
+                <div className="h-12 relative w-[300px]">
+                  <Image
+                    className="object-fit   -z-10 bottom-0 "
+                    alt="Trainer Backdrop"
+                    src="/images/spray.webp"
+                    fill
+                  />
+                  <h1 className="text-white font-bold text-[1em] [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] z-40 relative left-[2.5rem] top-[.25rem]">
+                    UNLOCK YOUR GREATNESS
+                  </h1>
+                </div>
+
                 <div className="text-gray-100 font-bold text-[4em] [text-shadow:_0_3px_3px_rgb(0_0_0_/_40%)]">
                   FORGE THE BODY
                 </div>
@@ -80,27 +89,37 @@ export default function Home() {
               Your Local Atlas Gym&nbsp;
               <span>
                 <i class="fa-solid fa-location-dot"></i>&nbsp;
-                <button className="hover:tracking-[.15em] transition-all duration-300"
-                role={"button"}
-                aria-label={"Local Atlas Gym Selector"}>
+                <button
+                  className="hover:tracking-[.15em] transition-all duration-300"
+                  role={"button"}
+                  aria-label={"Local Atlas Gym Selector"}
+                >
                   {localAtlas}
                 </button>
                 &nbsp;
-                <button className="uppercase text-xs"
-                role="button"
-                aria-label="Change Local Atlas Location">Change</button>
+                <button
+                  className="uppercase text-xs"
+                  role="button"
+                  aria-label="Change Local Atlas Location"
+                >
+                  Change
+                </button>
               </span>
             </div>
             <div className="flex justify-center">
               <div className="flex gap-4 font-medium">
-                <button className="w-52 h-14 bg-white uppercase text-red-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300"
-                role="button"
-                aria-label="View information about your local Atlas Gym">
+                <button
+                  className="w-52 h-14 bg-white uppercase text-red-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300"
+                  role="button"
+                  aria-label="View information about your local Atlas Gym"
+                >
                   Get Details
                 </button>
-                <button className="w-36 h-14 bg-white uppercase text-orange-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300"
-                role="button"
-                aria-label="Memberships Button">
+                <button
+                  className="w-36 h-14 bg-white uppercase text-orange-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300"
+                  role="button"
+                  aria-label="Memberships Button"
+                >
                   JOIN NOW
                 </button>
               </div>
@@ -127,6 +146,7 @@ export default function Home() {
                 <h2 className="text-[1.5em] font-semibold">
                   Personalized Training
                 </h2>
+
                 <div className="h-1 w-1/2 bg-gray-400 mt-2"></div>
               </div>
               <div
@@ -198,7 +218,7 @@ export default function Home() {
 
         <div className="bg-white flex flex-col">
           <div className="bg-[url('/images/18410.webp')] bg-cover h-max bg-opacity-10 py-8">
-            <div className="text-black  text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold">
+            <div className="text-black  text-center text-2xl mt-10 mb-2.5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold">
               <span>
                 <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
               </span>
@@ -206,6 +226,19 @@ export default function Home() {
               <span>
                 <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
               </span>
+            </div>
+            <div className="flex justify-center">
+            <div className="h-8 relative w-[200px] mb-2.5">
+              <Image
+                className="object-fit relative "
+                alt="Trainer Backdrop"
+                src="/images/spray.webp"
+                fill
+              />
+              <h1 className="text-white text-center font-bold text-[1em] [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] z-40 relative top-[.25rem] uppercase">
+                Here For You
+              </h1>
+            </div>
             </div>
             <div className="flex justify-center">
               <div className="max-w-[400px] text-center text-gray-700 font-medium">
