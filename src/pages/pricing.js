@@ -25,7 +25,7 @@ export default function Pricing() {
         <div className="h-[400px] w-full bg-black relative flex justify-center items-end">
           <Image src="/images/sub-page-1.webp" className="object-cover" fill />
           <div className="w-full h-full z-10 absolute bg-black/50"></div>
-          <div className="text-black  text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold z-30 text-white">
+          <div className=" text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold z-30 text-white">
             <span>
               <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
             </span>
