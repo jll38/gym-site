@@ -8,7 +8,7 @@ export function Footer({}) {
           <div className="mb-6 md:mb-0">
             <Link href="/" className="flex items-center">
               <img
-                src="/images/atlas-logo-3.png"
+                src="/images/atlas-logo-3.webp"
                 className="h-[40px] w-[300px] mr-3"
                 alt="Atlas Gym Logo"
               />

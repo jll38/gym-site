@@ -29,7 +29,7 @@ export default function Home() {
       <main className="bg-black">
         <Navbar />
         <div className="flex justify-center items-center mx-auto">
-          <div className="h-[85vh] overflow-hidden z-0 bg-[url('/images/landing.png')] bg-cover bg-no-repeat w-screen">
+          <div className="h-[85vh] overflow-hidden z-0 bg-[url('/images/landing.webp')] bg-cover bg-no-repeat w-screen">
             <div
               name="bgChild"
               className="relative flex flex-col justify-center items-center sm:items-end text-left  w-full h-full pr-12"
@@ -189,7 +189,7 @@ export default function Home() {
         </div>
 
         <div className="bg-white flex flex-col">
-          <div className="bg-[url('/images/18410.jpg')] bg-cover h-max bg-opacity-10 py-8">
+          <div className="bg-[url('/images/18410.webp')] bg-cover h-max bg-opacity-10 py-8">
             <div className="text-black  text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold">
               <span>
                 <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
@@ -208,17 +208,17 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-24 ">
               <Trainer
                 name="Adam Doe"
-                img="/images/trainers/adam-doe-transparent.png"
+                img="/images/trainers/adam-doe-transparent.webp"
                 trainerType={"Crossfit"}
               />
               <Trainer
                 name="The Arnold"
-                img="/images/trainers/arnold-transparent.png"
+                img="/images/trainers/arnold-transparent.webp"
                 trainerType={"Bodybuilding"}
               />
               <Trainer
                 name="Marie D. Thomas"
-                img="/images/trainers/marie-thomas-transparent-2.png"
+                img="/images/trainers/marie-thomas-transparent-2.webp"
                 trainerType={"Lifestyle"}
               />
             </div>
@@ -303,28 +303,28 @@ export default function Home() {
               <div className="w-[200px] h-[100px] relative">
                 <Image
                   className="object-scale-down"
-                  src="/images/brands/gymshark.png"
+                  src="/images/brands/gymshark.webp"
                   fill
                 ></Image>
               </div>
               <div className="w-[200px] h-[100px] relative">
                 <Image
                   className="object-scale-down"
-                  src="/images/brands/ryse.png"
+                  src="/images/brands/ryse.webp"
                   fill
                 ></Image>
               </div>
               <div className="w-[200px] h-[100px] relative">
                 <Image
                   className="object-scale-down"
-                  src="/images/brands/bodybuilding-com.png"
+                  src="/images/brands/bodybuilding-com.webp"
                   fill
                 ></Image>
               </div>
               <div className="w-[200px] h-[100px] relative  ">
                 <Image
                   className="object-scale-down"
-                  src="/images/brands/news.png"
+                  src="/images/brands/news.webp"
                   fill
                 ></Image>
               </div>
@@ -353,13 +353,13 @@ export default function Home() {
                 title={"Experienced"}
                 price="49.99"
                 features={""}
-                thumbnail="/images/pricing/pricing-1.jpeg"
+                thumbnail="/images/pricing/pricing-1.webp"
               />
               <PriceCard
                 title={"Mr. Olympia"}
                 price="59.99"
                 features={""}
-                thumbnail="/images/pricing/pricing-3.jpeg"
+                thumbnail="/images/pricing/pricing-3.webp"
               />
             </div>
           </div>

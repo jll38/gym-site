@@ -38,7 +38,7 @@ export default function Pricing() {
           </div>
           <div className="h-[400px] w-[300px]  relative mb-10 border-black border-4">
             <Image
-              src="/images/skipped-legs.jpeg"
+              src="/images/skipped-legs.webp"
               className="object-cover"
               fill
             />

@@ -48,7 +48,7 @@ export function Navbar({ solid }) {
         >
           <Image
             className="object-contain"
-            src="/images/atlas-logo-3.png"
+            src="/images/atlas-logo-3.webp"
             alt="Atlas Gym Logo"
             fill
           />
@@ -89,7 +89,7 @@ export function Navbar({ solid }) {
           >
             <Image
               className="object-contain"
-              src="/images/atlas-logo-3.png"
+              src="/images/atlas-logo-3.webp"
               alt="Atlas Gym Logo"
               fill
             />

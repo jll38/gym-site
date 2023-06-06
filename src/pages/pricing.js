@@ -23,7 +23,7 @@ export default function Pricing() {
       <main className="bg-black">
         <Navbar />
         <div className="h-[400px] w-full bg-black relative flex justify-center items-end">
-          <Image src="/images/sub-page-1.jpg" className="object-cover" fill />
+          <Image src="/images/sub-page-1.webp" className="object-cover" fill />
           <div className="w-full h-full z-10 absolute bg-black/50"></div>
           <div className="text-black  text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold z-30 text-white">
             <span>
@@ -49,13 +49,13 @@ export default function Pricing() {
                 title={"Experienced"}
                 price="49.99"
                 features={""}
-                thumbnail="/images/pricing/pricing-1.jpeg"
+                thumbnail="/images/pricing/pricing-1.webp"
               />
               <PriceCard
                 title={"Mr. Olympia"}
                 price="59.99"
                 features={""}
-                thumbnail="/images/pricing/pricing-3.jpeg"
+                thumbnail="/images/pricing/pricing-3.webp"
               />
             </div>
           </div>
