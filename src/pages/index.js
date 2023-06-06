@@ -80,19 +80,27 @@ export default function Home() {
               Your Local Atlas Gym&nbsp;
               <span>
                 <i class="fa-solid fa-location-dot"></i>&nbsp;
-                <button className="hover:tracking-[.15em] transition-all duration-300">
+                <button className="hover:tracking-[.15em] transition-all duration-300"
+                role={"button"}
+                aria-label={"Local Atlas Gym Selector"}>
                   {localAtlas}
                 </button>
                 &nbsp;
-                <button className="uppercase text-xs">Change</button>
+                <button className="uppercase text-xs"
+                role="button"
+                aria-label="Change Local Atlas Location">Change</button>
               </span>
             </div>
             <div className="flex justify-center">
               <div className="flex gap-4 font-medium">
-                <button className="w-52 h-14 bg-white uppercase text-red-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300">
+                <button className="w-52 h-14 bg-white uppercase text-red-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300"
+                role="button"
+                aria-label="View information about your local Atlas Gym">
                   Get Details
                 </button>
-                <button className="w-36 h-14 bg-white uppercase text-orange-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300">
+                <button className="w-36 h-14 bg-white uppercase text-orange-500 tracking-[.2em] hover:tracking-[.1em] transition-all duration-300"
+                role="button"
+                aria-label="Memberships Button">
                   JOIN NOW
                 </button>
               </div>
@@ -116,9 +124,9 @@ export default function Home() {
                 className="h-1/3 flex flex-col justify-center items-center"
               >
                 <i class="fa-solid fa-dumbbell text-6xl pb-4  "></i>
-                <h3 className="text-[1.5em] font-semibold">
+                <h2 className="text-[1.5em] font-semibold">
                   Personalized Training
-                </h3>
+                </h2>
                 <div className="h-1 w-1/2 bg-gray-400 mt-2"></div>
               </div>
               <div
@@ -142,7 +150,7 @@ export default function Home() {
                 className="h-1/3 flex flex-col justify-center items-center"
               >
                 <i class="fa-solid fa-martini-glass-empty text-6xl pb-4"></i>
-                <h3 className="text-[1.5em] font-semibold">Juice Bar</h3>
+                <h2 className="text-[1.5em] font-semibold">Juice Bar</h2>
                 <div className="h-1 w-1/2 bg-gray-400 mt-2"></div>
               </div>
               <div
@@ -167,7 +175,7 @@ export default function Home() {
                 className="h-1/3 flex flex-col justify-center items-center"
               >
                 <i class="fa-solid fa-temperature-arrow-up text-6xl pb-4"></i>
-                <h3 className="text-[1.5em] font-semibold">Sauna & Spa</h3>
+                <h2 className="text-[1.5em] font-semibold">Sauna & Spa</h2>
                 <div className="h-1 w-1/2 bg-gray-400 mt-2"></div>
               </div>
               <div
@@ -273,6 +281,8 @@ export default function Home() {
                     <div className="flex gap-4">
                       <button
                         id="testimonial-left-btn"
+                        role="button"
+                        aria-label="Previous Testimonial Button"
                         className="bg-white my-4 py-3 px-6 text-sm uppercase font-bold text-black hover:bg-red-500 hover:text-white transition-all duration-300"
                       >
                         <i
@@ -280,8 +290,11 @@ export default function Home() {
                           className="relative fa-solid fa-arrow-left"
                         ></i>
                       </button>
+
                       <button
                         id="testimonial-right-btn"
+                        role="button"
+                        aria-label="Next Testimonial Button"
                         className="bg-white my-4 sm:py-3 px-6 text-sm uppercase font-bold text-black hover:bg-red-500 hover:text-white transition-all duration-300"
                       >
                         <i
@@ -304,6 +317,7 @@ export default function Home() {
                 <Image
                   className="object-scale-down"
                   src="/images/brands/gymshark.webp"
+                  alt="Brand Partner Gymshark"
                   fill
                 ></Image>
               </div>
@@ -311,6 +325,7 @@ export default function Home() {
                 <Image
                   className="object-scale-down"
                   src="/images/brands/ryse.webp"
+                  alt="Brand Partner Ryse"
                   fill
                 ></Image>
               </div>
@@ -318,6 +333,7 @@ export default function Home() {
                 <Image
                   className="object-scale-down"
                   src="/images/brands/bodybuilding-com.webp"
+                  alt="Brand Partner Bodybuilding.com"
                   fill
                 ></Image>
               </div>
@@ -325,6 +341,7 @@ export default function Home() {
                 <Image
                   className="object-scale-down"
                   src="/images/brands/news.webp"
+                  alt="Brand Partner Blank News"
                   fill
                 ></Image>
               </div>
@@ -348,18 +365,21 @@ export default function Home() {
                 price="29.99"
                 features={""}
                 thumbnail="/images/pricing/pricing-2.jpg"
+                tier={1}
               />
               <PriceCard
                 title={"Experienced"}
                 price="49.99"
                 features={""}
                 thumbnail="/images/pricing/pricing-1.webp"
+                tier={2}
               />
               <PriceCard
                 title={"Mr. Olympia"}
                 price="59.99"
                 features={""}
                 thumbnail="/images/pricing/pricing-3.webp"
+                tier={3}
               />
             </div>
           </div>

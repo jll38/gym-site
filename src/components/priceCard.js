@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-export function PriceCard({ title, price, features, thumbnail }) {
+export function PriceCard({ title, price, features, thumbnail, tier }) {
   return (
     <div
       id="price-card-1"
@@ -12,23 +12,19 @@ export function PriceCard({ title, price, features, thumbnail }) {
         onMouseEnter={() => {
           document
             .getElementById((title.toLowerCase() + "-img").toLowerCase())
-            .classList.remove("grayscale")
-            document
+            .classList.remove("grayscale");
+          document
             .getElementById((title.toLowerCase() + "-title").toLowerCase())
-            .classList.add("text-red-500")}
-            
-        }
-        onMouseLeave={() =>{
+            .classList.add("text-red-500");
+        }}
+        onMouseLeave={() => {
           document
             .getElementById((title.toLowerCase() + "-img").toLowerCase())
-            .classList.add("grayscale")
-            document
+            .classList.add("grayscale");
+          document
             .getElementById((title.toLowerCase() + "-title").toLowerCase())
-            .classList.remove("text-red-500")
-          }
-            
-            
-        }
+            .classList.remove("text-red-500");
+        }}
       >
         <Image
           src={thumbnail}
@@ -41,8 +37,10 @@ export function PriceCard({ title, price, features, thumbnail }) {
       </div>
       <div id="price-card-1-body" className="text-center h-[250px]">
         <div className="mx-auto relative bg-white -top-8 w-[250px] text-gray-600">
-          <div className="text-[1.7em] font-semibold tracking-[.05em] transition-all duration-400"
-          id={title.toLowerCase() + "-title"}>
+          <div
+            className="text-[1.7em] font-semibold tracking-[.05em] transition-all duration-400"
+            id={title.toLowerCase() + "-title"}
+          >
             {title}
           </div>
           <div className="flex justify-center relative left-2">
@@ -61,7 +59,7 @@ export function PriceCard({ title, price, features, thumbnail }) {
       </div>
       <div className="price-card-1-footer h-[150px] flex justify-center items-center">
         <button
-          id="price-btn-1"
+          id={"price-btn-" + tier}
           className="bg-white mt-4 py-4 px-6 text-sm uppercase font-bold border border-red-500 transition-all duration-300 hover:py-6 hover:px-10 hover:bg-red-500 hover:text-white"
         >
           Purchase Now

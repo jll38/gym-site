@@ -41,6 +41,9 @@ export function Navbar({ solid }) {
       >
         <button
           href="/"
+          role="button"
+          aria-label="Home Button"
+          tabIndex={0}
           className="h-16 w-36 relative"
           onClick={() => {
             window.location.assign("/");
@@ -55,20 +58,35 @@ export function Navbar({ solid }) {
         </button>
 
         <div className="lg:ml-[10%] flex gap-2 sm:gap-6 md:gap-12 lg:gap-20 md:text-sm lg:text-lg">
-          <button className="hover:text-white hover:border-b-2 border-orange-600 transition-all duration-50 [text-shadow:_0_1px_1px_rgb(0_0_0_/_100%)]">
-            <Link href="/about">About</Link>
+          <button className="hover:text-white hover:border-b-2 border-orange-600 transition-all duration-50 [text-shadow:_0_1px_1px_rgb(0_0_0_/_100%)]"
+          onClick={() => {window.location.assign("/about")}}
+          role="button"
+          aria-label="About Page Navigate Button">
+            About
           </button>
-          <button className="hover:text-white hover:border-b-2 border-orange-600 transition-all duration-50 [text-shadow:_0_1px_1px_rgb(0_0_0_/_100%)]">
-            <Link href="/services">Services</Link>
+          <button className="hover:text-white hover:border-b-2 border-orange-600 transition-all duration-50 [text-shadow:_0_1px_1px_rgb(0_0_0_/_100%)]"
+          onClick={() => {window.location.assign("/services")}}
+          role="button"
+          aria-label="Services Page Navigate Button">
+            Services
           </button>
-          <button className="hover:text-white hover:border-b-2 border-orange-600 transition-all duration-50 [text-shadow:_0_1px_1px_rgb(0_0_0_/_100%)]">
-            <Link href="/pricing">Pricing</Link>
+          <button className="hover:text-white hover:border-b-2 border-orange-600 transition-all duration-50 [text-shadow:_0_1px_1px_rgb(0_0_0_/_100%)]"
+          onClick={() => {window.location.assign("/pricing")}}
+          role="button"
+          aria-label="Pricing Page Navigate Button">
+            Pricing
           </button>
-          <button className="hover:text-white hover:border-b-2 border-orange-600 transition-all duration-50 [text-shadow:_0_1px_1px_rgb(0_0_0_/_100%)]">
-            <Link href="/shop">Shop</Link>
+          <button className="hover:text-white hover:border-b-2 border-orange-600 transition-all duration-50 [text-shadow:_0_1px_1px_rgb(0_0_0_/_100%)]"
+          onClick={() => {window.location.assign("/shop")}}
+          role="button"
+          aria-label="Shop Page Navigate Button">
+          Shop
           </button>
-          <button className="hover:text-white hover:border-b-2 border-orange-600 transition-all duration-50 [text-shadow:_0_1px_1px_rgb(0_0_0_/_100%)]">
-            <Link href="/contact">Contact</Link>
+          <button className="hover:text-white hover:border-b-2 border-orange-600 transition-all duration-50 [text-shadow:_0_1px_1px_rgb(0_0_0_/_100%)]"
+          onClick={() => {window.location.assign("/contact")}}
+          role="button"
+          aria-label="Contact Page Navigate Button">
+            Contact
           </button>
         </div>
       </nav>
@@ -82,6 +100,9 @@ export function Navbar({ solid }) {
         <div>
           <button
             href="/"
+            role="button"
+            aria-label="Home Button"
+            tabIndex={0}
             className="h-24 w-50 relative"
             onClick={() => {
               window.location.assign("/");
