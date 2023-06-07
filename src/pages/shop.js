@@ -1,3 +1,4 @@
+import { ShopItem } from './../components/ShopItem';
 import { PriceCard } from "./../components/priceCard";
 import { Footer } from "./../components/footer";
 import { Navbar } from "./../components/Navbar";
@@ -35,33 +36,14 @@ export default function Shop() {
           </div>
         </div>
 
-        <div className="bg-white flex flex-col py-8 items-center border-b-2">
-          <div className="flex justify-center">
-            <div className="h-[500px] w-[350px] border">
-              <div className="h-[425px] w-full border border-red-500"></div>
-              <div className="h-[75px] w-full border border-blue-500 flex flex-col items-center">
-                <div className="uppercase font-medium tracking-[.1em]">
-                  Essential Oversized Tee
-                </div>
-                <div className="uppercase text-gray-600 tracking-[.1em]">
-                  $34.99
-                </div>
-                <div className="flex gap-1">
-                  <div className="p-[2px] border">
-                    <div className="w-[10px] h-[10px] bg-red-500 "></div>
-                  </div>
-                  <div className="p-[2px] border border-transparent">
-                    <div className="w-[10px] h-[10px] bg-yellow-500 "></div>
-                  </div>
-                  <div className="p-[2px] border border-transparent">
-                    <div className="w-[10px] h-[10px] bg-orange-800 "></div>
-                  </div>
-                  <div className="p-[2px] border border-transparent">
-                    <div className="w-[10px] h-[10px] bg-gray-600 "></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="bg-white flex flex-col items-center border-b-2 px-24 py-16">
+          <div className="flex flex-wrap justify-center gap-20 max-w-[3840px] transform-all duration-150">
+            <ShopItem name="Essential Oversized Tee 1" price={34.99} img={"https://cdn.shopify.com/s/files/1/1775/6429/products/DSC01331_800x.jpg?v=1653094875"}/>
+            <ShopItem name="Essential Oversized Tee 2" price={34.99} img={"https://cdn.shopify.com/s/files/1/1775/6429/products/DSC01331_800x.jpg?v=1653094875"}/>
+            <ShopItem name="Essential Oversized Tee 3 " price={34.99} img={"https://cdn.shopify.com/s/files/1/1775/6429/products/DSC01331_800x.jpg?v=1653094875"}/>
+            <ShopItem name="Essential Oversized Tee 4" price={34.99} img={"https://cdn.shopify.com/s/files/1/1775/6429/products/DSC01331_800x.jpg?v=1653094875"}/>
+            <ShopItem name="Essential Oversized Tee 5" price={34.99} img={"https://cdn.shopify.com/s/files/1/1775/6429/products/DSC01331_800x.jpg?v=1653094875"}/>
+            <ShopItem name="Essential Oversized Tee 6" price={34.99} img={"https://cdn.shopify.com/s/files/1/1775/6429/products/DSC01331_800x.jpg?v=1653094875"}/>
           </div>
         </div>
       </main>
