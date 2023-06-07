@@ -9,6 +9,8 @@ import { Inter } from "next/font/google";
 
 export default function Shop() {
   const title = "Shop";
+  const [male, setMale] = useState(true);
+
   return (
     <>
       <Head>
@@ -36,8 +38,12 @@ export default function Shop() {
           </div>
         </div>
 
-        <div className="bg-white flex flex-col items-center border-b-2 px-24 py-16">
-          <div className="flex flex-wrap justify-center gap-20 max-w-[3840px] transform-all duration-150">
+        <div className="bg-white flex flex-col items-center border-b-2">
+            <div className='flex justify-center gap-20 my-8 text-2xl font-medium '>
+                <button className={`uppercase tracking-[.15em] ${male ? "text-gray-800" : "text-gray-600"}`} onClick={() => {setMale(true)}}>For Him</button>
+                <button className={`uppercase tracking-[.15em] ${!male ? "text-gray-800" : "text-gray-600"}`} onClick={() => {setMale(false)}}>For Her</button>
+            </div>
+          <div className="flex flex-wrap justify-center gap-20 max-w-[3840px] transform-all duration-150 mx-24  ">
             <ShopItem name="Essential Oversized Tee 1" price={34.99} img={"https://cdn.shopify.com/s/files/1/1775/6429/products/DSC01331_800x.jpg?v=1653094875"}/>
             <ShopItem name="Essential Oversized Tee 2" price={34.99} img={"https://cdn.shopify.com/s/files/1/1775/6429/products/DSC01331_800x.jpg?v=1653094875"}/>
             <ShopItem name="Essential Oversized Tee 3 " price={34.99} img={"https://cdn.shopify.com/s/files/1/1775/6429/products/DSC01331_800x.jpg?v=1653094875"}/>
