@@ -19,8 +19,8 @@ export function ShopItem({ name, price, img, colors }) {
   }
   
   return (
-    <button className="h-[525px] w-[350px] ">
-      <div className="h-[450px] w-full relative mb-4 overflow-hidden"
+    <button className="h-[575px] w-[350px] ">
+      <div className="h-[500px] w-full relative mb-4 overflow-hidden"
       onMouseEnter={() => {
         document.getElementById(slugify(name) + "-img").classList.add("scale-105");
       }}
@@ -37,8 +37,8 @@ export function ShopItem({ name, price, img, colors }) {
       />
       </div>
       <div className="h-[75px] w-full  flex flex-col items-center">
-        <div className="uppercase font-medium tracking-[.1em]">{name}</div>
-        <div className="uppercase text-gray-600 tracking-[.1em]">${price}</div>
+        <div className="uppercase font-light tracking-[.1em]">{name}</div>
+        <div className="uppercase font-light  text-gray-600 tracking-[.1em]">${price}</div>
         <div className="flex gap-1">
           <button
             data-color="red"
