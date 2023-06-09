@@ -11,6 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [localAtlas, setLocalAtlas] = useState("Newark");
+  const [modal, setModal] = useState(false);
   return (
     <>
       <Head>
@@ -26,6 +27,79 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div
+        id={"modal"}
+        className={`${
+          modal ? "fixed" : "hidden"
+        } w-screen h-screen bg-black/50 z-50 overflow-y-hidden flex justify-center items-center `}
+      >
+        <div className="w-[300px] h-[260px] sm:w-[600px] sm:h-[140px] bg-white rounded-md flex flex-col  items-center gap-4 leading-5 overflow-hidden">
+          <div
+            id="modal-head"
+            className="w-full h-[40px] py-2 px-4 border-b-2"
+          >
+            <div className="leading-6 ">
+              <div className="text-[1.2em] text-gray-900 font-medium">
+                Select location
+              </div>
+            </div>
+          </div>
+          <div className="">
+            <div className="flex flex-wrap justify-start gap-10 child:font-semibold text-gray-800 px-4">
+              <button
+                onClick={() => {
+                  setLocalAtlas("New York");
+                  setModal(false);
+                }}
+              >
+                New York
+              </button>
+              <button
+                onClick={() => {
+                  setLocalAtlas("Philadeliphia");
+                  setModal(false);
+                }}
+              >
+                Philadelphia
+              </button>
+              <button
+                onClick={() => {
+                  setLocalAtlas("Belmar");
+                  setModal(false);
+                }}
+              >
+                Belmar
+              </button>
+              <button
+                onClick={() => {
+                  setLocalAtlas("Atlantic City");
+                  setModal(false);
+                }}
+              >
+                Atlantic City
+              </button>
+              <button
+                onClick={() => {
+                  setLocalAtlas("Newark");
+                  setModal(false);
+                }}
+              >
+                Newark
+              </button>
+            </div>
+          </div>
+          <div className="w-full h-[50px] bg-gray-200 flex justify-end items-center">
+            <button
+              className="bg-white border-2 border-red-500 h-[40px] w-[60px] mx-4 text-black transition-all duration-100 hover:bg-red-500 hover:text-white hover:h-[50px] hover:w-[65px]"
+              onClick={() => {
+                setModal(false);
+              }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
       <main className="bg-black w-screen">
         <Navbar />
         <div className="flex justify-center items-center mx-auto">
@@ -93,6 +167,9 @@ export default function Home() {
                   className="hover:tracking-[.15em] transition-all duration-300"
                   role={"button"}
                   aria-label={"Local Atlas Gym Selector"}
+                  onClick={() => {
+                    setModal(true);
+                  }}
                 >
                   {localAtlas}
                 </button>
@@ -228,17 +305,17 @@ export default function Home() {
               </span>
             </div>
             <div className="flex justify-center">
-            <div className="h-8 relative w-[200px] mb-2.5">
-              <Image
-                className="object-fit relative "
-                alt="Trainer Backdrop"
-                src="/images/spray.webp"
-                fill
-              />
-              <h1 className="text-white text-center font-bold text-[1em] [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] z-40 relative top-[.25rem] uppercase">
-                Here For You
-              </h1>
-            </div>
+              <div className="h-8 relative w-[200px] mb-2.5">
+                <Image
+                  className="object-fit relative "
+                  alt="Trainer Backdrop"
+                  src="/images/spray.webp"
+                  fill
+                />
+                <h1 className="text-white text-center font-bold text-[1em] [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] z-40 relative top-[.25rem] uppercase">
+                  Here For You
+                </h1>
+              </div>
             </div>
             <div className="flex justify-center">
               <div className="max-w-[400px] text-center text-gray-700 font-medium">
@@ -346,37 +423,41 @@ export default function Home() {
           </div>
           <div className="flex justify-center w-screen pb-4">
             <div className="flex justify-evenly w-[1080px] flex-wrap gap-10 child:opacity-60 child-hover:opacity-100">
-              <div className="w-[200px] h-[100px] relative">
-                <Image
-                  className="object-scale-down"
-                  src="/images/brands/gymshark.webp"
-                  alt="Brand Partner Gymshark"
-                  fill
-                ></Image>
+              <div className="flex flex-col sm:flex-row gap-10">
+                <div className="w-[200px] h-[100px] relative">
+                  <Image
+                    className="object-scale-down"
+                    src="/images/brands/gymshark.webp"
+                    alt="Brand Partner Gymshark"
+                    fill
+                  ></Image>
+                </div>
+                <div className="w-[200px] h-[100px] relative">
+                  <Image
+                    className="object-scale-down"
+                    src="/images/brands/ryse.webp"
+                    alt="Brand Partner Ryse"
+                    fill
+                  ></Image>
+                </div>
               </div>
-              <div className="w-[200px] h-[100px] relative">
-                <Image
-                  className="object-scale-down"
-                  src="/images/brands/ryse.webp"
-                  alt="Brand Partner Ryse"
-                  fill
-                ></Image>
-              </div>
-              <div className="w-[200px] h-[100px] relative">
-                <Image
-                  className="object-scale-down"
-                  src="/images/brands/bodybuilding-com.webp"
-                  alt="Brand Partner Bodybuilding.com"
-                  fill
-                ></Image>
-              </div>
-              <div className="w-[200px] h-[100px] relative  ">
-                <Image
-                  className="object-scale-down"
-                  src="/images/brands/news.webp"
-                  alt="Brand Partner Blank News"
-                  fill
-                ></Image>
+              <div className="flex flex-col sm:flex-row gap-10">
+                <div className="w-[200px] h-[100px] relative">
+                  <Image
+                    className="object-scale-down"
+                    src="/images/brands/bodybuilding-com.webp"
+                    alt="Brand Partner Bodybuilding.com"
+                    fill
+                  ></Image>
+                </div>
+                <div className="w-[200px] h-[100px] relative">
+                  <Image
+                    className="object-scale-down"
+                    src="/images/brands/news.webp"
+                    alt="Brand Partner Blank News"
+                    fill
+                  ></Image>
+                </div>
               </div>
             </div>
           </div>
