@@ -12,6 +12,7 @@ export function Trainer({ name, img, trainerType }) {
             src={img}
             fill
             id={`${nameID}-img`}
+            loading="lazy"
           />
           <div
             className="absolute h-[100%] w-[50%] left-[24%] cursor-pointer"
@@ -30,6 +31,7 @@ export function Trainer({ name, img, trainerType }) {
             alt="Trainer Backdrop"
             src="/images/spray.webp"
             fill
+            loading="lazy"
           />
         </div>
         <button

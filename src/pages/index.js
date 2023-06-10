@@ -115,6 +115,7 @@ export default function Home() {
                     alt="Trainer Backdrop"
                     src="/images/spray.webp"
                     fill
+                    loading="lazy"
                   />
                   <h1 className="text-white font-bold text-[1em] [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] z-40 relative left-[2.5rem] top-[.25rem]">
                     UNLOCK YOUR GREATNESS
@@ -311,6 +312,7 @@ export default function Home() {
                   alt="Trainer Backdrop"
                   src="/images/spray.webp"
                   fill
+                  loading="lazy"
                 />
                 <h1 className="text-white text-center font-bold text-[1em] [text-shadow:_0_2px_2px_rgb(0_0_0_/_40%)] z-40 relative top-[.25rem] uppercase">
                   Here For You

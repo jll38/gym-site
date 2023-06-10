@@ -39,6 +39,7 @@ export function ShopItem({ name, price, img, colors }) {
           alt={name + " Photo"}
           id={slugify(name) + "-img"}
           fill
+          loading="lazy"
         />
       </div>
       <div className="h-[75px] w-full  flex flex-col items-center">

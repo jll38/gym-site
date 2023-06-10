@@ -11,6 +11,7 @@ export function Footer({}) {
                 src="/images/atlas-logo-3.webp"
                 className="h-[40px] w-[300px] mr-3"
                 alt="Atlas Gym Logo"
+                loading="lazy"
               />
             </Link>
             <div className="text-sm flex mt-4 justify-end sm:mt-0 text-gray-200 flex-col h-[70px]">

@@ -54,6 +54,7 @@ export function Navbar({ solid }) {
             src="/images/atlas-logo-3.webp"
             alt="Atlas Gym Logo"
             fill
+            loading="lazy"
           />
         </button>
 

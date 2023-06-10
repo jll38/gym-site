@@ -23,7 +23,12 @@ export default function Contact() {
       <main className="bg-black">
         <Navbar />
         <div className="h-[400px] w-full bg-black relative flex justify-center items-end">
-          <Image src="/images/sub-page-1.webp" className="object-cover" fill />
+          <Image
+            src="/images/sub-page-1.webp"
+            className="object-cover"
+            fill
+            loading="lazy"
+          />
           <div className="w-full h-full z-10 absolute bg-black/50"></div>
           <div className="text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold z-30 text-white">
             <span>

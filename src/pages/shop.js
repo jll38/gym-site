@@ -40,6 +40,7 @@ export default function Shop() {
             src="https://cdn.shopify.com/s/files/1/1775/6429/files/465_new_desk_8a59c064-4cd8-4ed7-b231-4dcb28792031_1600x.png?v=1685729660"
             className="object-cover"
             fill
+            loading="lazy"
           />
           <div className="w-full h-full z-10 absolute bg-black/50"></div>
           <div className=" text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold z-30 text-white">

@@ -33,6 +33,7 @@ export function PriceCard({ title, price, features, thumbnail, tier }) {
           className="object-none grayscale transition-all duration-400"
           width={600}
           height={300}
+          loading="lazy"
         ></Image>
       </div>
       <div id="price-card-1-body" className="text-center h-[250px]">
