@@ -16,29 +16,36 @@ export function ShopItem({ name, price, img, colors }) {
 
   const handleColorSelection = (e) => {
     setColor(e.currentTarget.dataset.color);
-  }
-  
+  };
+
   return (
-    <button className="h-[575px] w-[350px] ">
-      <div className="h-[500px] w-full relative mb-4 overflow-hidden"
-      onMouseEnter={() => {
-        document.getElementById(slugify(name) + "-img").classList.add("scale-105");
-      }}
-      onMouseLeave={() => {
-        document.getElementById(slugify(name) + "-img").classList.remove("scale-105");
-      }}>
-        
-      <Image
-      src={img}
-      className={"object-cover transform-all duration-300"}
-      alt={name + " Photo"}
-      id={slugify(name) + "-img"}
-      fill
-      />
+    <button className="h-[650px] w-[350px] ">
+      <div
+        className="h-[500px] w-full relative mb-4 overflow-hidden"
+        onMouseEnter={() => {
+          document
+            .getElementById(slugify(name) + "-img")
+            .classList.add("scale-105");
+        }}
+        onMouseLeave={() => {
+          document
+            .getElementById(slugify(name) + "-img")
+            .classList.remove("scale-105");
+        }}
+      >
+        <Image
+          src={img}
+          className={"object-cover transform-all duration-300"}
+          alt={name + " Photo"}
+          id={slugify(name) + "-img"}
+          fill
+        />
       </div>
       <div className="h-[75px] w-full  flex flex-col items-center">
         <div className="uppercase font-light tracking-[.1em]">{name}</div>
-        <div className="uppercase font-light  text-gray-600 tracking-[.1em]">${price}</div>
+        <div className="uppercase font-light  text-gray-600 tracking-[.1em]">
+          ${price}
+        </div>
         <div className="flex gap-1">
           <button
             data-color="red"
@@ -89,6 +96,24 @@ export function ShopItem({ name, price, img, colors }) {
             ></div>
           </button>
         </div>
+      </div>
+      <div>
+        <button
+          id={slugify(name) + "-cart-btn"}
+          className="bg-gray-200 w-full py-2 text-gray-700 hover:underline hover:bg-gray-300/75 transition-all duration-150 border-2 "
+          onClick={() => {
+            document
+              .getElementById(slugify(name) + "-cart-btn")
+              .classList.add("border-blue-500");
+              setTimeout(() => {
+                document
+              .getElementById(slugify(name) + "-cart-btn")
+              .classList.remove("border-blue-500");
+              }, "100");
+          }}
+        >
+          Add to Cart
+        </button>
       </div>
     </button>
   );

@@ -12,6 +12,7 @@ export default function Shop() {
   const title = "Shop";
   const [male, setMale] = useState(true);
   const [hasMounted, setHasMounted] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     setHasMounted(true);
@@ -35,7 +36,11 @@ export default function Shop() {
       <main className="bg-black">
         <Navbar />
         <div className="h-[400px] w-full bg-black relative flex justify-center items-end">
-          <Image src="https://cdn.shopify.com/s/files/1/1775/6429/files/465_new_desk_8a59c064-4cd8-4ed7-b231-4dcb28792031_1600x.png?v=1685729660" className="object-cover" fill />
+          <Image
+            src="https://cdn.shopify.com/s/files/1/1775/6429/files/465_new_desk_8a59c064-4cd8-4ed7-b231-4dcb28792031_1600x.png?v=1685729660"
+            className="object-cover"
+            fill
+          />
           <div className="w-full h-full z-10 absolute bg-black/50"></div>
           <div className=" text-center text-2xl mt-10 mb-5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold z-30 text-white">
             <span>
@@ -47,6 +52,21 @@ export default function Shop() {
             </span>
           </div>
         </div>
+
+        <button className="fixed w-[75px] h-[75px] bg-white border-2 rounded-full right-0 mx-12 flex justify-center items-center text-2xl hover:text-red-500 transition-all duration-200">
+          <div
+            className={`flex relative ${cartItems.length != 0 ? "left-1" : ""}`}
+          >
+            <i class="fa-solid fa-bag-shopping "></i>
+            {cartItems.length != 0 ? (
+              <div className="relative top-3">{cartItems.length}</div>
+            ) : (
+              <></>
+            )}
+          </div>
+        </button>
+
+        
 
         <div className="bg-white flex flex-col items-center border-b-2">
           <div className="flex justify-center gap-20 my-8 text-2xl font-medium ">
@@ -60,12 +80,12 @@ export default function Shop() {
                 document
                   .getElementById("shop-box")
                   .classList.remove("animate-fade");
-                
+
                 setTimeout(function () {
                   document
                     .getElementById("shop-box")
                     .classList.add("animate-fade");
-                    setMale(true);
+                  setMale(true);
                 }, 100);
               }}
             >
@@ -81,12 +101,12 @@ export default function Shop() {
                 document
                   .getElementById("shop-box")
                   .classList.remove("animate-fade");
-                
+
                 setTimeout(function () {
                   document
                     .getElementById("shop-box")
                     .classList.add("animate-fade");
-                    setMale(false);
+                  setMale(false);
                 }, 100);
               }}
             >

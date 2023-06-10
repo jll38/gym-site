@@ -38,9 +38,9 @@ export default function Pricing() {
 
         <div className="bg-[url('/images/18410.webp')] bg-cover flex flex-col py-8 items-center border-b-2">
           <div className="flex justify-center w-full">
-            <div className="w-[400px] text-xs sm:text-sm sm:text-lg sm:w-[700px] md:w-[1000px] mx-[2rem] sm:mx-[6rem] text-gray-700 child:mb-2 border-4 border-black px-[1rem] sm:px-[4rem] py-[2rem]">
+            <div className="w-[400px] text-xs  sm:text-lg sm:w-[700px] md:w-[1000px] mx-[2rem] sm:mx-[6rem] text-gray-700 child:mb-2 border-4 border-black px-[1rem] sm:px-[4rem] py-[2rem]">
               <h2 className="text-4xl text-black font-semibold text-center">Our Story</h2>
-              <div className="indent-[2rem] font-medium">
+              <div className="indent-[2rem] font-medium sm:text-[1.5rem] sm:leading-10">
                 At Atlas Gym, we&apos;re more than just a fitness center;
                 we&apos;re a community dedicated to helping individuals reach
                 their personal zenith. Founded in 2010 by a trio of health and
@@ -61,7 +61,7 @@ export default function Pricing() {
               </div>
 
               <h2 className="text-3xl text-black font-semibold">Our Vision</h2>
-              <div className="indent-[2rem] font-medium">
+              <div className="indent-[2rem] font-medium sm:text-[1.5rem] sm:leading-10">
               Atlas Gym envisions a world where fitness is not just a goal but a lifestyle. We believe in the power of fitness to transform lives, inspire change, and create a positive impact. Our vision guides us in everything we do, from designing our gym facilities to crafting our fitness programs and hiring our staff.
 
 
