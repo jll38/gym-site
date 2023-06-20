@@ -1,3 +1,4 @@
+import { SlideColorBox } from './../components/SlideColorBox';
 import { ShopItem } from "./../components/ShopItem";
 import { PriceCard } from "./../components/priceCard";
 import { Footer } from "./../components/footer";
@@ -43,31 +44,12 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="bg-white flex flex-col justify-center items-center border-b-2 h-[600px]">
-            <div className="border h-[500px] grid grid-cols-3">
-                <div
-                onMouseEnter={() => {
-                    document.getElementById('service-1-box').classList.remove('top-[450px]', 'bg-gray-800')
-
-                    document.getElementById('service-1-box').classList.add('top-0', 'bg-red-600/90')
-                }}
-                onMouseLeave={() => {
-                    document.getElementById('service-1-box').classList.remove('top-0', 'bg-red-600/90')
-
-                    document.getElementById('service-1-box').classList.add('top-[450px]', 'bg-gray-800')
-                }}
-                className="border-red-500 border w-[450px] bg-[url('/images/skipped-legs.webp')] bg-cover bg-no-repeat bg-center h-[500px] overflow-hidden">
-                    <div id="service-1-box"className="bg-gray-800 z-50 h-0 transition-all duration-300 top-[450px] h-[500px] relative flex justify-center">
-                        <div className="text-white top-2 relative text-lg uppercase font-medium">Sauna</div>
-                    </div>
-                </div>
-                <div className="border-red-500 border w-[450px]">
-
-                </div>
-                <div className="border-red-500 border w-[450px]">
-
-                </div>
-            </div>
+        <div className="bg-white flex flex-col gap-4 justify-center items-center border-b-2 h-[600px]">
+          <div className="border h-[500px] flex flex-wrap justify-center">
+            <SlideColorBox idNum={1} title={"Sauna"} sub={"Post-workout relaxation"} icon={"temperature-three-quarters"}/>
+            <SlideColorBox idNum={2} title={"Sauna"} sub={"Post-workout relaxation"} icon={"temperature-three-quarters"}/>
+            <SlideColorBox idNum={3} title={"Sauna"} sub={"Post-workout relaxation"} icon={"temperature-three-quarters"}/>
+          </div>
         </div>
       </main>
       <Footer />
