@@ -47,14 +47,13 @@ export function SlideColorBox({ idNum, title, sub, icon, img }) {
           .classList.add("-top-8", "text-white", "child:bg-zinc-800");
       }}
       className={
-        "w-[450px] bg-cover bg-no-repeat bg-center h-[500px] overflow-hidden"
+        "w-[350px] sm:w-[450px] bg-cover bg-no-repeat bg-center h-[500px] overflow-hidden"
       }
       style={{
         backgroundImage: `url(${img})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        width: "450px",
         height: "500px",
         overflow: "hidden",
       }}
