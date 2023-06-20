@@ -1,5 +1,5 @@
 import React from "react";
-export function SlideColorBox({ idNum, title, sub, icon }) {
+export function SlideColorBox({ idNum, title, sub, icon, img }) {
   return (
     <div
       onMouseEnter={() => {
@@ -29,7 +29,9 @@ export function SlideColorBox({ idNum, title, sub, icon }) {
         document
           .getElementById("service-" + idNum + "-box")
           .classList.remove("top-[0px]", "bg-red-600/90");
-        document.getElementById("service-" + idNum + "-title").classList.remove("top-10");
+        document
+          .getElementById("service-" + idNum + "-title")
+          .classList.remove("top-10");
         document
           .getElementById("service-" + idNum + "-icon")
           .classList.remove("top-6", "text-red-600", "child:bg-white"); //Add Classes
@@ -44,11 +46,22 @@ export function SlideColorBox({ idNum, title, sub, icon }) {
           .getElementById("service-" + idNum + "-icon")
           .classList.add("-top-8", "text-white", "child:bg-zinc-800");
       }}
-      className="border-red-500 border w-[450px] bg-[url('/images/sauna.webp')] bg-cover bg-no-repeat bg-center h-[500px] overflow-hidden"
+      className={
+        "w-[450px] bg-cover bg-no-repeat bg-center h-[500px] overflow-hidden"
+      }
+      style={{
+        backgroundImage: `url(${img})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        width: "450px",
+        height: "500px",
+        overflow: "hidden",
+      }}
     >
       <div
         id={"service-" + idNum + "-box"}
-        className="bg-zinc-800 z-50 transition-all duration-300 top-[440px] h-[500px] relative flex flex-col items-center px-10"
+        className="bg-zinc-800 z-30 transition-all duration-300 top-[440px] h-[500px] relative flex flex-col items-center px-10"
       >
         <div
           id={"service-" + idNum + "-icon"}

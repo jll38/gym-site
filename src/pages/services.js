@@ -44,11 +44,13 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="bg-white flex flex-col gap-4 justify-center items-center border-b-2 h-[600px]">
-          <div className="border h-[500px] flex flex-wrap justify-center">
-            <SlideColorBox idNum={1} title={"Sauna"} sub={"Post-workout relaxation"} icon={"temperature-three-quarters"}/>
-            <SlideColorBox idNum={2} title={"Sauna"} sub={"Post-workout relaxation"} icon={"temperature-three-quarters"}/>
-            <SlideColorBox idNum={3} title={"Sauna"} sub={"Post-workout relaxation"} icon={"temperature-three-quarters"}/>
+        <div className="bg-white flex flex-col gap-4 justify-center items-center">
+          <div className="flex flex-wrap justify-center gap-2 py-10">
+            <SlideColorBox idNum={1} title={"Personalized Training"} sub={"Work with experienced trainers to achieve your goals"} icon={"dumbbell"} img="/images/trainer.webp"/>
+            <SlideColorBox idNum={2} title={"Sauna"} sub={"Post-workout relaxation"} icon={"temperature-three-quarters"} img="/images/sauna.webp"/>
+            <SlideColorBox idNum={3} title={"Juice Bar"} sub={"Come for a refreshing pre-workout drink or protein smoothie"} icon={"martini-glass"} img="/images/protein.webp"/>
+            <SlideColorBox idNum={4} title={"Group Classes"} sub={"Make some friends and get a killer workout in"} icon={"people-group"} img="/images/group.jpeg"/>
+
           </div>
         </div>
       </main>

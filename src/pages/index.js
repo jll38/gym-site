@@ -340,7 +340,7 @@ export default function Home() {
                 name="Marie D. Thomas"
                 img="/images/trainers/marie-thomas-transparent-2.webp"
                 trainerType={"Lifestyle"}
-              />
+              /> 
             </div>
 
             <div></div>
