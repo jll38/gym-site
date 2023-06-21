@@ -50,6 +50,9 @@ export default function Services() {
             <SlideColorBox idNum={2} title={"Sauna"} sub={"Post-workout relaxation"} icon={"temperature-three-quarters"} img="/images/sauna.webp"/>
             <SlideColorBox idNum={3} title={"Juice Bar"} sub={"Come for a refreshing pre-workout drink or protein smoothie"} icon={"martini-glass"} img="/images/protein.webp"/>
             <SlideColorBox idNum={4} title={"Group Classes"} sub={"Make some friends and get a killer workout in"} icon={"people-group"} img="/images/group.jpeg"/>
+            <SlideColorBox idNum={5} title={"Childcare"} sub={"Don't let life slow you down from your fitness goals"} icon={"child"} img="/images/daycare.jpeg"/>
+            <SlideColorBox idNum={6} title={"Spa"} sub={"Post-workout relaxation"} icon={"spa"} img="/images/spa.jpeg"/>
+
 
           </div>
         </div>
