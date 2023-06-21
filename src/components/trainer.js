@@ -15,14 +15,14 @@ export function Trainer({ name, img, trainerType }) {
             loading="lazy"
           />
           <div
-            className="absolute h-[100%] w-[50%] left-[24%] cursor-pointer"
+            className="absolute h-[100%] w-[50%] left-[24%] cursor-pointer z-40"
             onMouseEnter={() => {
-              document.getElementById(`${nameID}-img`).classList.add("grayscale-0");
+              document.getElementById(`${nameID}-img`).classList.add("sm:grayscale-0");
             }}
             onMouseLeave={() => {
               document
                 .getElementById(`${nameID}-img`)
-                .classList.remove("grayscale-0");
+                .classList.remove("sm:grayscale-0");
             }}
             onClick={() => {}}
           />
