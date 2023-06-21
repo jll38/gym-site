@@ -7,7 +7,7 @@ export function Trainer({ name, img, trainerType }) {
       <div className="w-[300px] h-[400px] flex flex-col items-center justify-end">
         <div className="h-[300px] w-[300px] relative">
           <Image
-            className="object-contain drop-shadow-2xl shadow-red-500 z-40 absolute grayscale"
+            className="object-contain drop-shadow-2xl shadow-red-500 z-40 absolute sm:grayscale"
             alt={`Trainer ${name}`}
             src={img}
             fill

@@ -8,11 +8,11 @@ export function PriceCard({ title, price, features, thumbnail, tier }) {
     >
       <div
         id="price-card-1-head"
-        className="h-[200px] rounded-bl-[5rem] rounded-br-[5rem] overflow-hidden relative border-b-2 border-red-500"
+        className="h-[200px] overflow-hidden relative border-b-2 border-red-500"
         onMouseEnter={() => {
           document
             .getElementById((title.toLowerCase() + "-img").toLowerCase())
-            .classList.remove("grayscale");
+            .classList.remove("sm:grayscale");
           document
             .getElementById((title.toLowerCase() + "-title").toLowerCase())
             .classList.add("text-red-500");
@@ -20,7 +20,7 @@ export function PriceCard({ title, price, features, thumbnail, tier }) {
         onMouseLeave={() => {
           document
             .getElementById((title.toLowerCase() + "-img").toLowerCase())
-            .classList.add("grayscale");
+            .classList.add("sm:grayscale");
           document
             .getElementById((title.toLowerCase() + "-title").toLowerCase())
             .classList.remove("text-red-500");
@@ -30,7 +30,7 @@ export function PriceCard({ title, price, features, thumbnail, tier }) {
           src={thumbnail}
           id={title.toLowerCase() + "-img"}
           alt={title + " tier membership thumbnail"}
-          className="object-none grayscale transition-all duration-400"
+          className="object-none sm:grayscale transition-all duration-400"
           width={600}
           height={300}
           loading="lazy"
