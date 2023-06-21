@@ -75,7 +75,7 @@ export function SlideColorBox({ idNum, title, sub, icon, img }) {
           className="text-white -top-10  relative  uppercase font-medium transition-all duration-300"
         >
           <div className="text-center uppercase text-lg">{title}</div>
-          <div className="relative top-28 text-white text-md font-medium">
+          <div className="relative top-28 text-white text-md font-medium text-center">
             {sub}
           </div>
         </div>

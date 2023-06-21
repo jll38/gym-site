@@ -2,6 +2,7 @@ import { PriceCard } from "./../components/priceCard";
 import { Trainer } from "./../components/trainer";
 import { Footer } from "./../components/footer";
 import { Navbar } from "./../components/Navbar";
+import { SlideColorBox } from "@/components/SlideColorBox";
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
@@ -34,10 +35,7 @@ export default function Home() {
         } w-screen h-screen bg-black/50 z-50 overflow-y-hidden flex justify-center items-center `}
       >
         <div className="w-[300px] h-[260px] sm:w-[600px] sm:h-[140px] bg-white rounded-md flex flex-col  items-center gap-4 leading-5 overflow-hidden">
-          <div
-            id="modal-head"
-            className="w-full h-[40px] py-2 px-4 border-b-2"
-          >
+          <div id="modal-head" className="w-full h-[40px] py-2 px-4 border-b-2">
             <div className="leading-6 ">
               <div className="text-[1.2em] text-gray-900 font-medium">
                 Select location
@@ -204,8 +202,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-black/95 flex flex-col mt-2">
-          <div className="text-white text-center text-2xl my-10 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold">
+        <div className="bg-white flex flex-col gap-4 justify-center items-center">
+          <div className="text-black  text-center text-2xl mt-10 mb-2.5 tracking-[.1em] uppercase flex justify-center items-center gap-2 font-semibold">
             <span>
               <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
             </span>
@@ -214,83 +212,52 @@ export default function Home() {
               <div className="w-8 h-[2px] bg-gradient-to-r from-red-500 to-orange-600"></div>
             </span>
           </div>
-          <div className="flex justify-center gap-10 text-gray-400 flex-wrap">
-            <div className="h-[450px] min-w-[300px] max-w-[300px]w w-[300px] hover:text-gray-200 hover:bg-gray-200/5">
-              <div
-                name="cardHead"
-                className="h-1/3 flex flex-col justify-center items-center"
-              >
-                <i class="fa-solid fa-dumbbell text-6xl pb-4  "></i>
-                <h2 className="text-[1.5em] font-semibold">
-                  Personalized Training
-                </h2>
 
-                <div className="h-1 w-1/2 bg-gray-400 mt-2"></div>
-              </div>
-              <div
-                name="cardBody"
-                className="flex flex-col justify-center items-center"
-              >
-                <p className="break-words w-[275px] font-medium">
-                  Atlas Gym is proud to offer personalized training services
-                  designed to propel you towards your unique fitness goals. Our
-                  team of professional trainers utilizes cutting-edge technology
-                  and individualized programs to provide a workout regimen
-                  tailored specifically to you.
-                </p>
-              </div>
-              <div name="cardFooter" className="px-3 pt-4"></div>
-            </div>
-
-            <div className="h-[450px] min-w-[300px] max-w-[300px]w w-[300px] hover:text-gray-200 hover:bg-gray-200/5">
-              <div
-                name="cardHead"
-                className="h-1/3 flex flex-col justify-center items-center"
-              >
-                <i class="fa-solid fa-martini-glass-empty text-6xl pb-4"></i>
-                <h2 className="text-[1.5em] font-semibold">Juice Bar</h2>
-                <div className="h-1 w-1/2 bg-gray-400 mt-2"></div>
-              </div>
-              <div
-                name="cardBody"
-                className="flex flex-col justify-center items-center"
-              >
-                <p className="break-words w-[275px] font-medium">
-                  Energize your body and mind at the Atlas Gym Juice Bar.
-                  Discover our wide variety of fresh smoothies, specifically
-                  designed to aid in recovery, fuel your workout, or simply to
-                  refresh you on a hot day. Our offerings are prepared
-                  on-the-spot, using only the highest quality fruits,
-                  vegetables, and whey protein.
-                </p>
-              </div>
-              <div name="cardFooter" className="px-3"></div>
-            </div>
-
-            <div className="h-[450px] min-w-[300px] max-w-[300px]w w-[300px] hover:text-gray-200 hover:bg-gray-200/5">
-              <div
-                name="cardHead"
-                className="h-1/3 flex flex-col justify-center items-center"
-              >
-                <i class="fa-solid fa-temperature-arrow-up text-6xl pb-4"></i>
-                <h2 className="text-[1.5em] font-semibold">Sauna & Spa</h2>
-                <div className="h-1 w-1/2 bg-gray-400 mt-2"></div>
-              </div>
-              <div
-                name="cardBody"
-                className="flex flex-col justify-center items-center"
-              >
-                <p className="break-words w-[275px] font-medium">
-                  Energize your body and mind at the Atlas Gym Juice Bar.
-                  Discover our wide variety of fresh smoothies, specifically
-                  designed to aid in recovery, fuel your workout, or simply to
-                  refresh you on a hot day. Our offerings are prepared
-                  on-the-spot, using only the highest quality fruits,
-                  vegetables, and whey protein.
-                </p>
-              </div>
-              <div name="cardFooter" className="px-3"></div>
-            </div>
+          <div className="flex flex-wrap justify-center gap-2 py-6">
+            <SlideColorBox
+              idNum={1}
+              title={"Personalized Training"}
+              sub={"Work with experienced trainers to achieve your goals"}
+              icon={"dumbbell"}
+              img="/images/trainer.webp"
+            />
+            <SlideColorBox
+              idNum={2}
+              title={"Sauna"}
+              sub={"Post-workout relaxation"}
+              icon={"temperature-three-quarters"}
+              img="/images/sauna.webp"
+            />
+            <SlideColorBox
+              idNum={3}
+              title={"Juice Bar"}
+              sub={
+                "Come for a refreshing pre-workout drink or protein smoothie"
+              }
+              icon={"martini-glass"}
+              img="/images/protein.webp"
+            />
+            <SlideColorBox
+              idNum={4}
+              title={"Group Classes"}
+              sub={"Make some friends and get a killer workout in"}
+              icon={"people-group"}
+              img="/images/group.jpeg"
+            />
+            <SlideColorBox
+              idNum={5}
+              title={"Childcare"}
+              sub={"Don't let life slow you down from your fitness goals"}
+              icon={"child"}
+              img="/images/daycare.jpeg"
+            />
+            <SlideColorBox
+              idNum={6}
+              title={"Spa"}
+              sub={"Post-workout relaxation"}
+              icon={"spa"}
+              img="/images/spa.jpeg"
+            />
           </div>
         </div>
 
@@ -340,7 +307,7 @@ export default function Home() {
                 name="Marie D. Thomas"
                 img="/images/trainers/marie-thomas-transparent-2.webp"
                 trainerType={"Lifestyle"}
-              /> 
+              />
             </div>
 
             <div></div>
