@@ -424,8 +424,8 @@ export default function Home() {
             Brands We Work With
           </div>
           <div className="flex justify-center w-screen pb-4">
-            <div className="flex justify-evenly w-[1080px] flex-wrap gap-10 child:opacity-60 child-hover:opacity-100">
-              <div className="flex flex-col sm:flex-row gap-10">
+            <div className="flex justify-evenly w-[1080px] flex-wrap gap-10 ">
+              <div className="flex flex-col sm:flex-row gap-10 child:opacity-60 child-hover:opacity-100">
                 <div className="w-[200px] h-[100px] relative">
                   <Image
                     className="object-scale-down"
@@ -443,7 +443,7 @@ export default function Home() {
                   ></Image>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-10">
+              <div className="flex flex-col sm:flex-row gap-10 child:opacity-60 child-hover:opacity-100">
                 <div className="w-[200px] h-[100px] relative">
                   <Image
                     className="object-scale-down"
