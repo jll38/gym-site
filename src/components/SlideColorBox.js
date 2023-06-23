@@ -6,7 +6,7 @@ export function SlideColorBox({ idNum, title, sub, icon, img }) {
         //Remove Classes
         document
           .getElementById("service-" + idNum + "-box")
-          .classList.remove("top-[440px]", "bg-zinc-800");
+          .classList.remove("top-[170px]", "lg:top-[340px]", "bg-zinc-800");
         document
           .getElementById("service-" + idNum + "-title")
           .classList.remove("-top-10");
@@ -38,7 +38,7 @@ export function SlideColorBox({ idNum, title, sub, icon, img }) {
 
         document
           .getElementById("service-" + idNum + "-box")
-          .classList.add("top-[440px]", "bg-zinc-800");
+          .classList.add("top-[170px]", "lg:top-[340px]", "bg-zinc-800");
         document
           .getElementById("service-" + idNum + "-title")
           .classList.add("-top-10");
@@ -47,35 +47,35 @@ export function SlideColorBox({ idNum, title, sub, icon, img }) {
           .classList.add("-top-8", "text-white", "child:bg-zinc-800");
       }}
       className={
-        "w-[350px] sm:w-[450px] bg-cover bg-no-repeat bg-center h-[500px] overflow-hidden"
+        "w-[300px] lg:w-[450px] bg-cover bg-no-repeat bg-center  overflow-hidden h-[200px] lg:h-[400px] transition-all duration-300"
       }
       style={{
         backgroundImage: `url(${img})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        height: "500px",
+        
         overflow: "hidden",
       }}
     >
       <div
         id={"service-" + idNum + "-box"}
-        className="bg-zinc-800 z-30 transition-all duration-300 top-[440px] h-[500px] relative flex flex-col items-center px-10"
+        className="bg-zinc-800 z-30 transition-all duration-300 top-[170px] lg:top-[340px] h-[400px] relative flex flex-col items-center px-10"
       >
         <div
           id={"service-" + idNum + "-icon"}
           className="w-full flex justify-center relative -top-8 text-white transition-all duration-300 child:bg-zinc-800"
         >
-          <div className="w-[60px] h-[60px] relative  rounded-full flex justify-center items-center ">
-            <i class={`fa-solid fa-${icon} text-3xl`}></i>
+          <div className="w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] relative  rounded-full flex justify-center items-center ">
+            <i class={`fa-solid fa-${icon} text-xl lg:text-3xl`}></i>
           </div>
         </div>
         <div
           id={"service-" + idNum + "-title"}
           className="text-white -top-10  relative  uppercase font-medium transition-all duration-300"
         >
-          <div className="text-center uppercase text-lg">{title}</div>
-          <div className="relative top-28 text-white text-md font-medium text-center">
+          <div className="text-center uppercase text-sm top-1 lg:top-0 relative lg:text-lg">{title}</div>
+          <div className="relative top-4 lg:top-28 text-white text-sm lg:text-md font-medium text-center">
             {sub}
           </div>
         </div>

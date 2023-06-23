@@ -213,7 +213,7 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2 py-6">
+          <div className="flex flex-wrap justify-center gap-2 py-6 max-w-[1800px]">
             <SlideColorBox
               idNum={1}
               title={"Personalized Training"}
