@@ -2,10 +2,15 @@ export class Traffic {
     ip_address: string;
     ip_type: string;
     location: Location;
-    constructor(ip_address: string, ip_type: string, location: Location){
+    device : string;
+    browser : string;
+
+    constructor(ip_address: string, ip_type: string, location: Location, device: string, browser: string) {
         this.location = location;
         this.ip_address = ip_address;
         this.ip_type = ip_type;
+        this.browser = browser;
+        this.device = device;
         
     }
 }
